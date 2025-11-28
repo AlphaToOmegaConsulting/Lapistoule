@@ -1,0 +1,23 @@
+{
+    "name": "domaine-lapistoule-static",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "tsc && vite build",
+        "preview": "vite preview",
+        "build:design-system": "node _ingestion/build-design-system.js",
+        "build:behaviors-snapshot": "node _ingestion/build-behaviors-snapshot.js"
+    },
+    "devDependencies": {
+        "@types/node": "^24.10.1",
+        "playwright": "^1.57.0",
+        "ts-node": "^10.9.2",
+        "typescript": "^5.2.2",
+        "vite": "^5.0.0"
+    },
+    "dependencies": {
+        "lucide": "^0.555.0"
+    }
+}

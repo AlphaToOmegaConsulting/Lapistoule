@@ -1,0 +1,132 @@
+/* =========================================
+   HEADER
+   ========================================= */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 1.5rem 0;
+    transition: all 0.5s ease;
+    background: none;
+}
+
+.main-header.scrolled {
+    background-color: rgba(250, 249, 246, 0.95);
+    backdrop-filter: blur(4px);
+    padding: 1rem 0;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* Header Links Color Logic */
+.header-logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: var(--color-stone-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link {
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-stone-white);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.nav-link:hover {
+    color: var(--color-matte-gold);
+}
+
+/* CTA Button - Primary Action (Solid Gold for visibility) */
+.header-cta {
+    background-color: var(--color-matte-gold);
+    border-color: var(--color-matte-gold);
+    color: var(--color-white);
+    font-weight: 600; /* Make it slightly bolder */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* subtle shadow to lift it */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.header-cta:hover {
+    background-color: var(--color-vine-green);
+    border-color: var(--color-vine-green);
+    color: var(--color-white);
+    transform: translateY(-2px); /* Micro-animation: lift up slightly */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.2); /* Enhanced shadow on hover */
+}
+
+/* Scrolled State Colors */
+.main-header.scrolled .header-logo,
+.main-header.scrolled .nav-link,
+.main-header.scrolled .menu-icon {
+    color: var(--color-anthracite);
+    text-shadow: none;
+}
+
+/* Keep CTA consistent (Solid Gold) even when scrolled, 
+   but we don't need to override anything if we removed the specific scrolled rules for it.
+   However, if we want to ensure it stands out against the light header: */
+.main-header.scrolled .header-cta {
+    /* Optional: You could invert it here if requested, but keeping it consistent is better UX */
+    box-shadow: none; /* Remove shadow on flat header if desired, or keep it. */
+}
+
+/* Dark Header (for non-home pages) */
+.main-header.header-dark {
+    background-color: var(--color-anthracite);
+    padding: 1rem 0;
+}
+
+.main-header.header-dark .header-logo,
+.main-header.header-dark .nav-link,
+.main-header.header-dark .menu-icon {
+    color: var(--color-stone-white);
+    text-shadow: none;
+}
+
+/* Mobile Menu */
+.mobile-menu-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: inherit;
+}
+
+.main-header.mobile-menu-open .menu-icon {
+    color: var(--color-anthracite);
+}
+
+.mobile-menu-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: var(--color-stone-white);
+    z-index: 900;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.mobile-nav-link {
+    font-family: var(--font-serif);
+    font-size: 2rem;
+    color: var(--color-anthracite);
+}
+
+.mobile-nav-link:hover {
+    color: var(--color-matte-gold);
+}
