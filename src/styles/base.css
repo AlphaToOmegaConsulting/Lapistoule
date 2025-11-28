@@ -4,36 +4,57 @@
 
 /* 1. VARIABLES */
 :root {
+    /* Design tokens */
+    --color-primary: #C6A664;
+    --color-secondary: #4A5D44;
+    --color-background: #FAF9F6;
+    --color-surface: #ffffff;
+    --color-text: #2C2E35;
+    --color-muted: #e7e5e4;
+    --color-overlay: rgba(0, 0, 0, 0.4);
+    --color-surface-veil: rgba(250, 249, 246, 0.95);
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.08);
+    --shadow-card: 0 10px 20px rgba(0, 0, 0, 0.1);
+
+    /* Fonts */
+    --font-heading: "Cormorant Garamond", serif;
+    --font-body: "Montserrat", sans-serif;
+
+    /* Spacing scale */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 2rem;
+    --space-xl: 4rem;
+    --space-xxl: 6rem;
+
+    /* Legacy variables (kept for compatibility) */
     /* Colors */
-    --color-stone-white: #FAF9F6;
+    --color-stone-white: var(--color-background);
     --color-stone-light: #f5f5f4;
-    /* stone-50 approx */
-    --color-stone-200: #e7e5e4;
-    --color-anthracite: #2C2E35;
-    --color-vine-green: #4A5D44;
-    --color-matte-gold: #C6A664;
-    --color-white: #ffffff;
+    --color-stone-200: var(--color-muted);
+    --color-anthracite: var(--color-text);
+    --color-vine-green: var(--color-secondary);
+    --color-matte-gold: var(--color-primary);
+    --color-white: var(--color-surface);
     --color-white-90: rgba(255, 255, 255, 0.9);
     --color-white-60: rgba(255, 255, 255, 0.6);
     --color-black-10: rgba(0, 0, 0, 0.1);
 
     /* Fonts */
-    --font-serif: "Cormorant Garamond", serif;
-    --font-sans: "Montserrat", sans-serif;
+    --font-serif: var(--font-heading);
+    --font-sans: var(--font-body);
 
     /* Spacing */
-    --spacing-sm: 0.5rem;
-    /* 8px */
-    --spacing-md: 1rem;
-    /* 16px */
-    --spacing-lg: 2rem;
-    /* 32px */
-    --spacing-xl: 4rem;
-    /* 64px */
-    --spacing-xxl: 6rem;
-    /* 96px */
+    --spacing-sm: var(--space-sm);
+    --spacing-md: var(--space-md);
+    --spacing-lg: var(--space-lg);
+    --spacing-xl: var(--space-xl);
+    --spacing-xxl: var(--space-xxl);
     --spacing-xxxl: 8rem;
-    /* 128px */
 
     /* Container */
     --container-width: 1200px;
@@ -68,9 +89,9 @@ html {
 }
 
 body {
-    font-family: var(--font-sans);
-    background-color: var(--color-stone-white);
-    color: var(--color-anthracite);
+    font-family: var(--font-body);
+    background-color: var(--color-background);
+    color: var(--color-text);
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
@@ -98,7 +119,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: var(--font-serif);
+    font-family: var(--font-heading);
     font-weight: 400;
     line-height: 1.2;
 }

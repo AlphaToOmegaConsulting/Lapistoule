@@ -8,7 +8,6 @@ export default defineConfig({
                 main: resolve(__dirname, 'index.html'),
                 domaine: resolve(__dirname, 'domaine.html'),
                 vins: resolve(__dirname, 'vins.html'),
-                oenotourisme: resolve(__dirname, 'oenotourisme.html'),
                 contact: resolve(__dirname, 'contact.html'),
             },
         },

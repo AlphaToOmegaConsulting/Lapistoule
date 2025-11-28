@@ -1,46 +1,31 @@
 import '../styles/style.css';
-import { initHeader } from './header';
-import { initGlobal } from './global';
+import { initHeader } from './components/header';
+import { initGlobal } from './components/global';
+
+type PageInitializer = () => Promise<void>;
+
+const pageInitializers: Record<string, PageInitializer> = {
+    home: async () => (await import('./pages/home')).initHomePage(),
+    domaine: async () => (await import('./pages/domaine')).initDomainePage(),
+    vins: async () => (await import('./pages/vins')).initVinsPage(),
+    visites: async () => (await import('./pages/visites')).initVisitesPage(),
+    contact: async () => (await import('./pages/contact')).initContactPage(),
+};
 
 document.addEventListener('DOMContentLoaded', async () => {
-    console.log('Main.ts: DOMContentLoaded fired. Starting app...');
-    // 1. Initialize shared components
     initGlobal();
     initHeader();
 
-    // 2. Router based on data-page attribute
-    const page = document.body.dataset.page;
+    const page = document.body.dataset.page || '';
+    const initPage = pageInitializers[page];
 
-    try {
-        switch (page) {
-            case 'home':
-                const { initPage: initHome } = await import('./page-index');
-                initHome();
-                break;
-            case 'domaine':
-                const { initPage: initDomaine } = await import('./page-domaine');
-                initDomaine();
-                break;
-            case 'vins':
-                const { initPage: initVins } = await import('./page-vins');
-                initVins();
-                break;
-            case 'oenotourisme':
-                const { initPage: initOeno } = await import('./page-oenotourisme');
-                initOeno();
-                break;
-            case 'visites':
-                const { initPage: initVisites } = await import('./page-visites');
-                initVisites();
-                break;
-            case 'contact':
-                const { initPage: initContact } = await import('./page-contact');
-                initContact();
-                break;
-            default:
-                console.warn(`No specific logic found for page: ${page}`);
+    if (initPage) {
+        try {
+            await initPage();
+        } catch (error) {
+            console.error('Error loading page script:', error);
         }
-    } catch (error) {
-        console.error('Error loading page script:', error);
+    } else {
+        console.warn(`No specific logic found for page: ${page}`);
     }
 });

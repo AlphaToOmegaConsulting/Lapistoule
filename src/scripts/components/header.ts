@@ -2,7 +2,6 @@ import { createIcons, icons } from 'lucide';
 
 export function initHeader() {
     try {
-        // --- Header Scroll Effect ---
         const header = document.getElementById('main-header');
         const menuIcon = document.getElementById('menu-icon');
 
@@ -16,7 +15,6 @@ export function initHeader() {
             });
         }
 
-        // --- Mobile Menu Toggle ---
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
         const mobileLinks = mobileMenu?.querySelectorAll('a');
@@ -38,7 +36,6 @@ export function initHeader() {
 
             mobileMenuBtn.addEventListener('click', toggleMenu);
 
-            // Close mobile menu when a link is clicked
             mobileLinks?.forEach(link => {
                 link.addEventListener('click', () => {
                     if (mobileMenu.classList.contains('open')) {
@@ -48,9 +45,8 @@ export function initHeader() {
             });
         }
 
-        // Initial Icon Creation for the Header
         createIcons({ icons: { Menu: icons.Menu, X: icons.X } });
-        
+
     } catch (error) {
         console.error('Error in initHeader:', error);
     }

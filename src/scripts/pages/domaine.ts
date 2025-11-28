@@ -1,12 +1,4 @@
-/**
- * Page Script: Histoire
- * Handles interactions specific to the history page
- */
-
-export const initPage = () => {
-  console.log('Page Domaine initialized');
-
-  // Animation Observer for scroll elements
+export function initDomainePage() {
   const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -22,7 +14,6 @@ export const initPage = () => {
     });
   }, observerOptions);
 
-  // Select elements to animate (matching standard classes in index.html)
   const animatedElements = document.querySelectorAll('.fade-in-up');
   animatedElements.forEach(el => observer.observe(el));
-};
+}

@@ -9,7 +9,7 @@
     justify-content: center;
     padding: 0.75rem 1.5rem;
     border: 1px solid transparent;
-    border-radius: 9999px;
+    border-radius: var(--radius-lg);
     /* rounded-full */
     font-family: var(--font-sans);
     font-size: 0.875rem;
@@ -22,33 +22,33 @@
 }
 
 .btn-primary {
-    background-color: var(--color-matte-gold);
-    color: var(--color-white);
+    background-color: var(--color-primary);
+    color: var(--color-surface);
 }
 
 .btn-primary:hover {
-    background-color: var(--color-white);
-    color: var(--color-anthracite);
+    background-color: var(--color-surface);
+    color: var(--color-text);
 }
 
 .btn-outline-light {
-    border-color: var(--color-stone-white);
-    color: var(--color-stone-white);
+    border-color: var(--color-surface);
+    color: var(--color-surface);
 }
 
 .btn-outline-light:hover {
-    background-color: var(--color-stone-white);
-    color: var(--color-anthracite);
+    background-color: var(--color-surface);
+    color: var(--color-text);
 }
 
 .btn-outline-dark {
-    border-color: var(--color-anthracite);
-    color: var(--color-anthracite);
+    border-color: var(--color-text);
+    color: var(--color-text);
 }
 
 .btn-outline-dark:hover {
-    background-color: var(--color-anthracite);
-    color: var(--color-white);
+    background-color: var(--color-text);
+    color: var(--color-surface);
 }
 
 .btn-square {
@@ -111,8 +111,7 @@
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background-color: rgba(44, 46, 53, 0.4);
-    /* anthracite/40 */
+    background-color: var(--color-overlay);
     mix-blend-mode: multiply;
 }
 
@@ -190,6 +189,21 @@
     text-align: center;
 }
 
+.card {
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-soft);
+    padding: var(--spacing-lg);
+}
+
+.card--elevated {
+    box-shadow: var(--shadow-card);
+}
+
+.card--muted {
+    background-color: var(--color-stone-light);
+}
+
 .value-icon-wrapper {
     margin-bottom: 1.5rem;
     padding: 1rem;
@@ -264,7 +278,8 @@
 
 /* 5. WINE CARDS */
 .wine-card {
-    background-color: var(--color-white);
+    background-color: var(--color-surface);
+    border-radius: var(--radius-md);
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     transition: box-shadow 0.3s;
     display: flex;
@@ -284,7 +299,7 @@
     height: 300px;
     /* Mobile height */
     overflow: hidden;
-    background-color: #fafafa;
+    background-color: var(--color-stone-light);
     display: flex;
     align-items: center;
     justify-content: center;

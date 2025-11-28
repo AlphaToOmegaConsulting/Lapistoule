@@ -1,7 +1,4 @@
-export function initPage() {
-    console.log('Page Visites initialized');
-
-    // Scroll indicator logic (if needed, though often handled by global or CSS)
+export function initVisitesPage() {
     const scrollIndicator = document.querySelector('.scroll-indicator');
     if (scrollIndicator) {
         scrollIndicator.addEventListener('click', () => {
@@ -12,7 +9,6 @@ export function initPage() {
         });
     }
 
-    // Animations (Fade in up) - If not handled globally
     const observerOptions = {
         threshold: 0.1
     };
