@@ -1,0 +1,105 @@
+/* =========================================
+   LAYOUT (Container, Grid, Flex, Spacing)
+   ========================================= */
+
+/* 1. CONTAINER & SECTIONS */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.section {
+    padding: var(--space-xl) 0;
+}
+
+.section--narrow {
+    padding: var(--space-lg) 0;
+}
+
+.section--center {
+    text-align: center;
+}
+
+.section-bg-light {
+    background-color: var(--color-background);
+}
+
+.section-bg-alt {
+    background-color: var(--color-stone-light);
+}
+
+.section-bg-dark {
+    background-color: var(--color-text);
+    color: var(--color-white);
+}
+
+.section-bg-green {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+/* 2. GRID SYSTEM */
+.grid {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.grid-2-cols {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3-cols {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4-cols {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+@media (max-width: 768px) {
+    .grid-2-cols,
+    .grid-3-cols,
+    .grid-4-cols {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* 3. FLEX UTILITIES */
+.flex {
+    display: flex;
+    gap: var(--space-md);
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+/* 4. VISIBILITY */
+.hidden {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .md-block {
+        display: block;
+    }
+    .md-flex {
+        display: flex;
+    }
+    .md-hidden {
+        display: none;
+    }
+}

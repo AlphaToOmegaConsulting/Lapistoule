@@ -1,0 +1,75 @@
+/* Styles spécifiques à la page d'accueil */
+
+/* --- PHILOSOPHY CARDS --- */
+.card-image-container {
+    width: 100%;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--space-lg);
+    background-color: var(--color-stone-light);
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.feature-card:hover .card-image {
+    transform: scale(1.05);
+}
+
+.feature-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    text-align: left;
+}
+
+/* --- WINE CARDS (Specific override for vertical bottles) --- */
+.wine-card .wine-image-wrapper {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md);
+}
+
+.wine-card .wine-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(var(--shadow-sm));
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.wine-card:hover .wine-image {
+    transform: scale(1.05) translateY(-5px);
+}
+
+/* --- EXPERIENCE SECTION --- */
+.experience-bg-text img {
+    opacity: 0.4;
+    filter: grayscale(100%) contrast(1.2);
+}
+
+/* --- WINES GRID (Specific layout to ensure equal widths) --- */
+.wines-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+    .wines-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .wines-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

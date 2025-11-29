@@ -1,0 +1,354 @@
+/* =========================================
+   PAGE: VINS (Catalogue)
+   ========================================= */
+
+/* 1. HERO SPECIFIC
+   ----------------------------------------- */
+.hero-vins {
+    position: relative;
+    height: 70vh; /* Moins haut que l'accueil (100vh) */
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: var(--color-white);
+}
+
+.hero-vins .hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.hero-vins .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 2. CATALOGUE SECTION
+   ----------------------------------------- */
+.catalogue-section {
+    padding: var(--space-xl) 0;
+    background-color: var(--color-background);
+    overflow: hidden; /* Pour éviter les débordements des animations */
+}
+
+/* 3. PRODUCT BLOCK (ZIG-ZAG)
+   ----------------------------------------- */
+.product-block {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xl);
+    margin-bottom: var(--space-xl); /* Espace entre les vins */
+}
+
+/* Dernier bloc de la section sans marge basse */
+.product-block:last-child {
+    margin-bottom: 0;
+}
+
+.product-image,
+.product-content {
+    flex: 1; /* 50% width */
+}
+
+/* Layout Desktop */
+.product-block.row {
+    flex-direction: row;
+}
+
+.product-block.row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* Image Wrapper Styling */
+.product-image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--space-lg);
+}
+
+/* Fond subtil derrière la bouteille */
+.image-backdrop {
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    background-color: var(--color-stone-light);
+    z-index: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--radius-sm);
+}
+
+.bottle-img {
+    position: relative;
+    z-index: 1;
+    max-height: 550px;
+    width: auto;
+    filter: drop-shadow(var(--shadow-md));
+    transition: transform 0.5s ease;
+}
+
+/* Hover Effect */
+.product-block:hover .bottle-img {
+    transform: scale(1.05) translateY(-10px);
+}
+
+/* Content Styling */
+.product-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 var(--space-lg);
+}
+
+.badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
+    margin-bottom: var(--space-sm);
+}
+
+.product-title {
+    font-size: 3rem;
+    color: var(--color-text);
+    margin-bottom: 0.25rem;
+    line-height: 1.1;
+}
+
+.product-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.125rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-primary);
+    margin-bottom: var(--space-md);
+    padding-bottom: var(--space-md);
+    border-bottom: 1px solid var(--color-stone-light);
+    display: inline-block;
+}
+
+.product-desc {
+    font-size: 1.1rem;
+    color: var(--color-text);
+    margin-bottom: var(--space-lg);
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Attributes List */
+.product-attributes {
+    margin-bottom: var(--space-lg);
+}
+
+.product-attributes li {
+    margin-bottom: var(--space-sm);
+    font-size: 0.95rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+/* Puce personnalisée */
+.product-attributes li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-secondary);
+    border-radius: 50%; /* Rond */
+}
+
+.attr-label {
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-right: 0.5rem;
+}
+
+.product-actions {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+}
+
+/* 4. INTERLUDE PHILOSOPHIE
+   ----------------------------------------- */
+.interlude-philosophie {
+    position: relative;
+    padding: var(--space-xl) 0;
+    margin: var(--space-xl) 0;
+    color: var(--color-white);
+    background-color: var(--color-primary); /* Fond vert noble uni */
+    border-top: 1px solid var(--color-secondary);
+    border-bottom: 1px solid var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.philosophie-content-wrapper {
+    max-width: 900px;
+    padding: var(--space-xl) var(--space-lg);
+    border: 1px solid rgba(var(--color-secondary-rgb), 0.5);
+    background: transparent;
+    border-radius: var(--radius-sm);
+}
+
+.philosophie-quote {
+    font-size: 1.75rem;
+    font-style: italic;
+    line-height: 1.6;
+    font-family: var(--font-heading);
+    position: relative;
+    z-index: 1;
+}
+
+.quote-icon {
+    display: block;
+    margin: 0 auto 1.5rem auto;
+    color: var(--color-secondary);
+    opacity: 0.8;
+}
+
+/* 5. BOUTON TÉLÉCHARGEMENT
+   ----------------------------------------- */
+.btn-download {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    background-color: transparent;
+    border: 2px solid var(--color-secondary); /* Bordure dorée plus visible */
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.btn-download:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-download svg {
+    transition: transform 0.3s ease;
+}
+
+.btn-download:hover svg {
+    transform: translateY(2px); /* Petite animation de l'icône vers le bas */
+}
+
+
+/* 6. RESPONSIVE (MOBILE & TABLET)
+   ----------------------------------------- */
+
+/* Mobile (< 768px) */
+@media (max-width: 767px) {
+    /* Sur mobile, on passe en colonne unique */
+    .product-block {
+        flex-direction: column !important;
+        gap: var(--space-md);
+        margin-bottom: var(--space-lg);
+    }
+
+    .product-image,
+    .product-content {
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+
+    .product-image {
+        order: -1;
+        margin-bottom: var(--space-md);
+    }
+
+    .image-backdrop {
+        width: 80%;
+        height: 250px;
+    }
+
+    .bottle-img {
+        max-height: 350px;
+    }
+
+    .product-title {
+        font-size: 2rem;
+    }
+
+    .product-subtitle {
+        display: block;
+        border-bottom: none;
+        margin-bottom: var(--space-md);
+        font-size: 1rem;
+    }
+
+    .product-desc {
+        font-size: 0.95rem;
+    }
+
+    .product-attributes {
+        text-align: left;
+        display: inline-block;
+    }
+
+    .product-actions {
+        justify-content: center;
+    }
+}
+
+/* Tablet (768px - 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .product-block {
+        gap: var(--space-lg);
+    }
+
+    .product-title {
+        font-size: 2.5rem;
+    }
+
+    .bottle-img {
+        max-height: 450px;
+    }
+
+    .image-backdrop {
+        width: 280px;
+        height: 380px;
+    }
+}
+
+/* Desktop large (> 1024px) - Default styles apply */
+
+/* 6. ANIMATIONS
+   ----------------------------------------- */
+.fade-element {
+    /* opacity: 0;  <-- Désactivé temporairement pour débugger l'affichage */
+    /* transform: translateY(30px); */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    will-change: opacity, transform;
+}
+
+.fade-element.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
