@@ -16,21 +16,35 @@ export const HEADER_TEMPLATE = `
           <span>Commander</span>
         </button>
       </nav>
-      <button id="mobile-menu-btn" class="mobile-menu-btn md:hidden">
-        <i data-lucide="menu" id="menu-icon" width="28" class="menu-icon text-stone-white"></i>
+      <button id="mobile-menu-btn" class="mobile-menu-btn md:hidden" aria-label="Ouvrir le menu de navigation">
+        <i data-lucide="menu" id="menu-icon" width="28" class="menu-icon"></i>
       </button>
     </div>
 
-    <div id="mobile-menu" class="mobile-menu-overlay">
-      <button id="mobile-menu-close" class="mobile-menu-close">
-        <i data-lucide="x" width="32" class="text-anthracite"></i>
-      </button>
-      <a href="index.html" class="mobile-nav-link">Accueil</a>
-      <a href="domaine.html" class="mobile-nav-link">Le Domaine</a>
-      <a href="vins.html" class="mobile-nav-link">Nos Vins</a>
-      <a href="visites.html" class="mobile-nav-link">Visites</a>
-      <a href="contact.html" class="mobile-nav-link">Contact</a>
-      <button class="btn btn-outline-dark btn-square">Commander</button>
+    <div id="mobile-menu" class="mobile-menu-overlay" role="dialog" aria-modal="true" aria-label="Menu de navigation mobile">
+      <div class="mobile-menu-content">
+        <nav class="flex flex-col items-center gap-md">
+          <a href="index.html" class="mobile-nav-link">Accueil</a>
+          <a href="domaine.html" class="mobile-nav-link">Le Domaine</a>
+          <a href="vins.html" class="mobile-nav-link">Nos Vins</a>
+          <a href="visites.html" class="mobile-nav-link">Visites</a>
+          <a href="contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+        
+        <button class="btn btn-primary mobile-menu-cta">
+          <i data-lucide="shopping-bag" width="20"></i>
+          <span>Commander</span>
+        </button>
+
+        <div class="mobile-menu-footer flex flex-col items-center gap-sm">
+          <a href="tel:0565201262" class="text-sm font-medium tracking-wide">05 65 20 12 62</a>
+          <p class="text-sm text-center opacity-70">Lieu-dit La Pistoule<br>46140 Luzech</p>
+          <div class="flex gap-md mt-sm">
+              <a href="https://www.instagram.com/domainedelapistoule/" target="_blank"><i data-lucide="instagram" width="20"></i></a>
+              <a href="https://www.facebook.com/domainedelapistoule/" target="_blank"><i data-lucide="facebook" width="20"></i></a>
+          </div>
+        </div>
+      </div>
     </div>
 `;
 

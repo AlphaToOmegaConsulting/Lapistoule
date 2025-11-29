@@ -1,4 +1,4 @@
-import { createIcons, icons } from 'lucide';
+import { refreshIcons } from '../utils/icons';
 
 export function initHeader() {
     try {
@@ -17,8 +17,8 @@ export function initHeader() {
 
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        const mobileMenuClose = document.getElementById('mobile-menu-close');
-        const mobileLinks = mobileMenu?.querySelectorAll('a');
+        // Select all clickable items within the menu: links and the new CTA button
+        const mobileClickables = mobileMenu?.querySelectorAll('a, .mobile-menu-cta');
 
         if (mobileMenuBtn && mobileMenu && menuIcon && header) {
             const toggleMenu = () => {
@@ -26,30 +26,50 @@ export function initHeader() {
                 if (isOpen) {
                     mobileMenu.classList.remove('open');
                     header.classList.remove('mobile-menu-open');
+                    document.body.style.overflow = '';
                     menuIcon.setAttribute('data-lucide', 'menu');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 } else {
                     mobileMenu.classList.add('open');
                     header.classList.add('mobile-menu-open');
+                    document.body.style.overflow = 'hidden';
                     menuIcon.setAttribute('data-lucide', 'x');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'true');
                 }
-                createIcons({ icons: { Menu: icons.Menu, X: icons.X } });
+                refreshIcons();
+            };
+
+            // Close with Escape key
+            const handleEscape = (e: KeyboardEvent) => {
+                if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+                    toggleMenu();
+                }
             };
 
             mobileMenuBtn.addEventListener('click', toggleMenu);
-            if (mobileMenuClose) {
-                mobileMenuClose.addEventListener('click', toggleMenu);
-            }
+            document.addEventListener('keydown', handleEscape);
+            
+            // Close when clicking the background overlay
+            mobileMenu.addEventListener('click', (e) => {
+                if (e.target === mobileMenu) {
+                    toggleMenu();
+                }
+            });
 
-            mobileLinks?.forEach(link => {
+            // Close when a link or the CTA is clicked
+            mobileClickables?.forEach(link => {
                 link.addEventListener('click', () => {
                     if (mobileMenu.classList.contains('open')) {
                         toggleMenu();
                     }
                 });
             });
+
+            // Initialize aria-expanded state
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
         }
 
-        createIcons({ icons: { Menu: icons.Menu, X: icons.X } });
+        refreshIcons();
     } catch (error) {
         console.error('Error in initHeader:', error);
     }
