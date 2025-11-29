@@ -4,27 +4,28 @@
    ========================================= */
 
 /* 0. Settings - Design Tokens */
-@import "./tokens.css";
+@import './tokens.css';
 
 /* 1. Base & Reset */
-@import "./base.css";
+@import './base.css';
 
 /* 2. Layout & Grid System */
-@import "./layout.css";
+@import './layout.css';
 
 /* 3. Components */
-@import "./components.css";
+@import './components.css';
 
 /* 4. Global Partials */
-@import "./header.css";
-@import "./footer.css";
+@import './header.css';
+@import './footer.css';
 
 /* 5. Utilities (dernières pour override) */
-@import "./utilities.css";
+@import './utilities.css';
+@import './lazy-load.css';
 
 /* 6. Pages (spécifiques - dernier layer) */
-@import "./pages/home.css";
-@import "./pages/domaine.css";
-@import "./pages/vins.css";
-@import "./pages/visites.css";
-@import "./pages/contact.css";
+@import './pages/home.css';
+@import './pages/domaine.css';
+@import './pages/vins.css';
+@import './pages/visites.css';
+@import './pages/contact.css';

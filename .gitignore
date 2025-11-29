@@ -20,6 +20,10 @@ Thumbs.db
 # Tooling & editors
 .vscode/
 .idea/
+.eslintcache
+*.swp
+*.swo
+*~
 
 # Test/artifact outputs
 coverage/

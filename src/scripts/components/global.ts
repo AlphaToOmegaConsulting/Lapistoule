@@ -36,8 +36,8 @@ export function initGlobal() {
                 Quote: icons.Quote,
                 ChevronsDown: icons.ChevronsDown,
                 Leaf: icons.Leaf,
-                FileDown: icons.FileDown
-            }
+                FileDown: icons.FileDown,
+            },
         });
     } catch (error) {
         console.error("Erreur lors de l'initialisation des icônes (Lucide):", error);
@@ -57,7 +57,10 @@ export function initGlobal() {
 function setActiveLink() {
     try {
         const pageFromDataset = document.body.dataset.page || '';
-        const current = pageFromDataset === 'home' || pageFromDataset === '' ? 'index.html' : `${pageFromDataset}.html`;
+        const current =
+            pageFromDataset === 'home' || pageFromDataset === ''
+                ? 'index.html'
+                : `${pageFromDataset}.html`;
 
         document.querySelectorAll<HTMLElement>('.nav-link').forEach(link => {
             const target = link.getAttribute('data-link');

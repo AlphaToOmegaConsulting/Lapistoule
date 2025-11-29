@@ -17,35 +17,43 @@
   /* ================================
      SPACING SCALE (Mobile-first)
      ================================ */
-  --space-xs: 0.5rem;      /* 8px */
-  --space-sm: 0.75rem;     /* 12px */
-  --space-md: 1rem;        /* 16px */
-  --space-lg: 1.5rem;      /* 24px */
-  --space-xl: 2rem;        /* 32px */
-  --space-2xl: 3rem;       /* 48px */
-  --space-3xl: 4rem;       /* 64px */
-  --space-4xl: 6rem;       /* 96px */
-  --space-5xl: 8rem;       /* 128px */
+  --space-xs: 0.25rem; /* 4px - Updated from base.css */
+  --space-sm: 0.5rem; /* 8px - Updated from base.css */
+  --space-md: 1rem; /* 16px - Updated from base.css */
+  --space-lg: 2rem; /* 32px - Updated from base.css */
+  --space-xl: 4rem; /* 64px - Updated from base.css */
+  --space-2xl: 6rem; /* 96px - Updated from base.css (was --space-xxl) */
+  --space-3xl: 8rem; /* 128px */
+  --space-4xl: 10rem;
+  --space-5xl: 12rem;
 
   /* Spacing sémantique responsive (utilise clamp pour scaling fluide) */
-  --spacing-section: clamp(2rem, 5vw, 8rem);
+  --spacing-section: clamp(4rem, 8vw, 8rem); /* Adjusted for better mobile/desktop balance */
   --spacing-gap: clamp(1rem, 3vw, 4rem);
-  --spacing-gap-responsive: clamp(1rem, 2.5vw, 4rem);
+  --spacing-gap-responsive: clamp(2rem, 4vw, 4rem);
   --container-padding: clamp(1rem, 2vw, 1.5rem);
 
   /* ================================
      TYPOGRAPHY SCALE (Fluid avec clamp)
      ================================ */
   /* Font sizes fluides - s'adaptent automatiquement au viewport */
-  --text-xs: clamp(0.75rem, 1.5vw, 0.875rem);        /* 12-14px */
-  --text-sm: clamp(0.875rem, 1.8vw, 1rem);           /* 14-16px */
-  --text-base: clamp(1rem, 2vw, 1.125rem);           /* 16-18px */
-  --text-lg: clamp(1.125rem, 2.5vw, 1.25rem);        /* 18-20px */
-  --text-xl: clamp(1.25rem, 3vw, 1.5rem);            /* 20-24px */
-  --text-2xl: clamp(1.5rem, 4vw, 2rem);              /* 24-32px */
-  --text-3xl: clamp(2rem, 5vw, 3rem);                /* 32-48px */
-  --text-4xl: clamp(2.5rem, 6vw, 4rem);              /* 40-64px */
-  --text-5xl: clamp(3rem, 8vw, 5rem);                /* 48-80px */
+  --text-xs: clamp(0.75rem, 1.5vw, 0.875rem); /* 12-14px */
+  --text-sm: clamp(0.8125rem, 1.5vw, 0.875rem); /* 13-14px - Updated from base.css */
+  --text-base: clamp(0.9375rem, 1vw + 0.5rem, 1.125rem); /* Updated from base.css */
+  --text-lg: clamp(1.125rem, 2vw, 1.375rem); /* Lead text */
+  --text-xl: clamp(1.25rem, 3vw, 1.5rem);
+  --text-2xl: clamp(1.5rem, 4vw, 2rem);
+  --text-3xl: clamp(2rem, 5vw, 3rem);
+  --text-4xl: clamp(2.5rem, 6vw, 4rem);
+  --text-5xl: clamp(3rem, 8vw, 5rem);
+
+  /* Fonts Families */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Legacy Font Variables */
+  --font-serif: var(--font-heading);
+  --font-sans: var(--font-body);
 
   /* Line heights */
   --leading-tight: 1.1;
@@ -64,8 +72,8 @@
   /* ================================
      TOUCH TARGETS (Accessibilité)
      ================================ */
-  --touch-target-min: 44px;     /* WCAG AA minimum */
-  --touch-target-comfortable: 48px;  /* WCAG AAA recommandé */
+  --touch-target-min: 44px; /* WCAG AA minimum */
+  --touch-target-comfortable: 48px; /* WCAG AAA recommandé */
   --button-min-height: 44px;
 
   /* ================================
@@ -77,33 +85,50 @@
   --container-xl: 1280px;
   --container-2xl: 1536px;
   --container-max: 1536px;
-  --container-width: 1200px;  /* Valeur par défaut actuelle */
+  --container-width: 1200px; /* Valeur par défaut actuelle */
 
   /* ================================
-     COLORS (existantes - conservées)
+     COLORS
      ================================ */
-  --color-primary: hsl(42, 78%, 55%);
-  --color-primary-dark: hsl(42, 78%, 45%);
-  --color-primary-light: hsl(42, 78%, 65%);
+  /* Main Colors from base.css */
+  --color-primary: #c6a664; /* Gold */
+  --color-primary-dark: #a68a50; /* Darker Gold (derived) */
+  --color-primary-light: #e0c888; /* Lighter Gold (derived) */
 
-  --color-secondary: hsl(120, 25%, 35%);
-  --color-secondary-dark: hsl(120, 25%, 25%);
-  --color-secondary-light: hsl(120, 25%, 45%);
+  --color-secondary: #4a5d44; /* Green */
+  --color-secondary-dark: #3a4a35; /* Darker Green */
+  --color-secondary-light: #6b7d65; /* Lighter Green */
 
-  --color-background: hsl(40, 20%, 97%);
-  --color-surface: hsl(0, 0%, 100%);
-  --color-text: hsl(0, 0%, 20%);
-  --color-text-light: hsl(0, 0%, 40%);
-  --color-text-lighter: hsl(0, 0%, 60%);
+  /* Neutrals */
+  --color-background: #faf9f6; /* Off-white */
+  --color-surface: #ffffff; /* Pure white */
+  --color-text: #2c2e35; /* Anthracite */
+  --color-muted: #e7e5e4; /* Stone 200 equivalent */
+
+  /* Functional Colors */
+  --color-overlay: rgba(0, 0, 0, 0.4);
+  --color-surface-veil: rgba(250, 249, 246, 0.95);
+
+  /* Legacy Color Mappings */
+  --color-stone-white: var(--color-background);
+  --color-stone-light: #f5f5f4;
+  --color-stone-200: var(--color-muted);
+  --color-anthracite: var(--color-text);
+  --color-vine-green: var(--color-secondary);
+  --color-matte-gold: var(--color-primary);
+  --color-white: var(--color-surface);
+  --color-white-90: rgba(255, 255, 255, 0.9);
+  --color-white-60: rgba(255, 255, 255, 0.6);
+  --color-black-10: rgba(0, 0, 0, 0.1);
 
   /* ================================
      BORDER RADIUS
      ================================ */
-  --radius-sm: 0.25rem;    /* 4px */
-  --radius-md: 0.5rem;     /* 8px */
-  --radius-lg: 1rem;       /* 16px */
-  --radius-xl: 1.5rem;     /* 24px */
-  --radius-2xl: 2rem;      /* 32px */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-2xl: 32px;
   --radius-full: 9999px;
 
   /* ================================
@@ -113,8 +138,8 @@
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-soft: 0 2px 10px rgba(0, 0, 0, 0.08);
-  --shadow-card: 0 4px 20px rgba(0, 0, 0, 0.1);
+  --shadow-soft: 0 6px 18px rgba(0, 0, 0, 0.08); /* Updated from base.css */
+  --shadow-card: 0 10px 20px rgba(0, 0, 0, 0.1); /* Updated from base.css */
 
   /* ================================
      Z-INDEX SCALE
@@ -142,34 +167,6 @@
 }
 
 /* ================================
-   RESPONSIVE ADJUSTMENTS
-   ================================ */
-
-/* Small phones (375px+) */
-@media (min-width: 375px) {
-  :root {
-    /* Légères augmentations pour phones un peu plus grands */
-    --container-padding: 1.125rem;
-  }
-}
-
-/* Tablets (768px+) */
-@media (min-width: 768px) {
-  :root {
-    /* Espacement augmenté sur tablettes */
-    --container-padding: 1.5rem;
-  }
-}
-
-/* Desktop (1024px+) */
-@media (min-width: 1024px) {
-  :root {
-    /* Espacement maximal sur desktop */
-    --container-padding: 2rem;
-  }
-}
-
-/* ================================
    LEGACY SUPPORT (compatibilité)
    ================================ */
 :root {
@@ -180,6 +177,7 @@
   --spacing-lg: var(--space-lg);
   --spacing-xl: var(--space-xl);
   --spacing-xxl: var(--space-2xl);
+  --spacing-xxxl: var(--space-3xl);
 }
 
 /* ================================
@@ -192,17 +190,5 @@
     --transition-fast: 0.01ms;
     --transition-base: 0.01ms;
     --transition-slow: 0.01ms;
-  }
-}
-
-/* Dark mode preparation (à activer si besoin) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    /* Uncomment pour activer le dark mode
-    --color-background: hsl(0, 0%, 10%);
-    --color-surface: hsl(0, 0%, 15%);
-    --color-text: hsl(0, 0%, 90%);
-    --color-text-light: hsl(0, 0%, 70%);
-    */
   }
 }

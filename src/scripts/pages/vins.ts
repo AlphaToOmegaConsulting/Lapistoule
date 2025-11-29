@@ -6,7 +6,7 @@ function initScrollAnimations() {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.1
+        threshold: 0.1,
     };
 
     const observer = new IntersectionObserver((entries, observerInstance) => {
@@ -18,7 +18,9 @@ function initScrollAnimations() {
         });
     }, observerOptions);
 
-    const targets = document.querySelectorAll('.product-block, .interlude-philosophie, .hero-content');
+    const targets = document.querySelectorAll(
+        '.product-block, .interlude-philosophie, .hero-content'
+    );
 
     targets.forEach(target => {
         target.classList.add('fade-element');

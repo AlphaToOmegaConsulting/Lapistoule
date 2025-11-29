@@ -20,6 +20,9 @@ export const HEADER_TEMPLATE = `
     </div>
 
     <div id="mobile-menu" class="mobile-menu-overlay">
+      <button id="mobile-menu-close" class="mobile-menu-close">
+        <i data-lucide="x" width="32" class="text-anthracite"></i>
+      </button>
       <a href="index.html" class="mobile-nav-link">Accueil</a>
       <a href="domaine.html" class="mobile-nav-link">Le Domaine</a>
       <a href="vins.html" class="mobile-nav-link">Nos Vins</a>

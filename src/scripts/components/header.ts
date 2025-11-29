@@ -17,6 +17,7 @@ export function initHeader() {
 
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
         const mobileLinks = mobileMenu?.querySelectorAll('a');
 
         if (mobileMenuBtn && mobileMenu && menuIcon && header) {
@@ -35,6 +36,9 @@ export function initHeader() {
             };
 
             mobileMenuBtn.addEventListener('click', toggleMenu);
+            if (mobileMenuClose) {
+                mobileMenuClose.addEventListener('click', toggleMenu);
+            }
 
             mobileLinks?.forEach(link => {
                 link.addEventListener('click', () => {
@@ -46,7 +50,6 @@ export function initHeader() {
         }
 
         createIcons({ icons: { Menu: icons.Menu, X: icons.X } });
-
     } catch (error) {
         console.error('Error in initHeader:', error);
     }
