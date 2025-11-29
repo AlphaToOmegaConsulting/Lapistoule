@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><!-- TITLE --></title>
+    <meta name="description" content="<!-- DESCRIPTION -->">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/src/styles/style.css">
+    <script type="module" src="/src/scripts/main.ts"></script>
+</head>
+
+<body data-page="<!-- SLUG -->">
+
+    <!-- HEADER -->
+    <header id="main-header" class="main-header header-dark">
+        <div class="container flex items-center justify-between">
+            <a href="index.html" id="header-logo" class="header-logo">
+                DOMAINE DE LAPISTOULE
+            </a>
+            <nav class="hidden md-flex items-center gap-lg">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="domaine.html" class="nav-link">Le Domaine</a>
+                <a href="vins.html" class="nav-link">Nos Vins</a>
+                <a href="visites.html" class="nav-link">Visites</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <button id="header-cta" class="btn btn-outline-light header-cta">
+                    <i data-lucide="shopping-bag" width="16"></i>
+                    <span>Commander</span>
+                </button>
+            </nav>
+            <button id="mobile-menu-btn" class="mobile-menu-btn md-hidden">
+                <i data-lucide="menu" id="menu-icon" width="28" class="menu-icon text-stone-white"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="mobile-menu-overlay">
+            <a href="index.html" class="mobile-nav-link">Accueil</a>
+            <a href="domaine.html" class="mobile-nav-link">Le Domaine</a>
+            <a href="vins.html" class="mobile-nav-link">Nos Vins</a>
+            <a href="visites.html" class="mobile-nav-link">Visites</a>
+            <a href="contact.html" class="mobile-nav-link">Contact</a>
+            <button class="btn btn-outline-dark btn-square">Commander</button>
+        </div>
+    </header>
+
+    <main style="padding-top: 5rem;">
+        <!-- CONTENT -->
+    </main>
+
+    <!-- FOOTER -->
+    <footer id="footer" class="main-footer">
+        <div class="container">
+            <div class="grid grid-4">
+                <div>
+                    <h3 class="footer-title">DOMAINE DE<br />LAPISTOULE</h3>
+                    <p class="text-light" style="font-size: 0.875rem; opacity: 0.6; margin-bottom: 1.5rem;">
+                        Vignerons indépendants à Luzech.<br />AOC Cahors & Côtes du Lot.
+                    </p>
+                    <div class="flex gap-md">
+                        <a href="#" style="opacity: 0.6;"><i data-lucide="instagram" width="20"></i></a>
+                        <a href="#" style="opacity: 0.6;"><i data-lucide="facebook" width="20"></i></a>
+                        <a href="#" style="opacity: 0.6;"><i data-lucide="linkedin" width="20"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Navigation</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="domaine.html">Le Domaine</a></li>
+                        <li><a href="vins.html">Nos Vins</a></li>
+                        <li><a href="visites.html">Visites & Dégustation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Contact</h4>
+                    <ul class="footer-links">
+                        <li class="flex gap-sm"><i data-lucide="map-pin" width="18"
+                                style="color: var(--color-matte-gold);"></i><span>123 Route des Vignes,<br />46140
+                                Luzech, France</span>
+                        </li>
+                        <li class="flex gap-sm"><i data-lucide="phone" width="18"
+                                style="color: var(--color-matte-gold);"></i><span>+33 (0)5 65 00 00 00</span></li>
+                        <li class="flex gap-sm"><i data-lucide="mail" width="18"
+                                style="color: var(--color-matte-gold);"></i><span>contact@lapistoule.com</span></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-heading">Horaires</h4>
+                    <p class="text-light" style="font-size: 0.875rem; opacity: 0.7;">
+                        Lundi - Samedi :<br />9h00 - 12h30 / 14h00 - 18h30<br /><br />Dimanche :<br />Sur rendez-vous
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Domaine de Lapistoule. Tous droits réservés.</p>
+                <div class="flex gap-lg">
+                    <a href="#">Mentions Légales</a>
+                    <a href="#">Plan du site</a>
+                    <a href="#">CGV</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

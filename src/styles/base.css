@@ -1,0 +1,138 @@
+/* =========================================
+   BASE (Variables, Reset, Typography)
+   ========================================= */
+
+/* 1. VARIABLES */
+:root {
+    /* Colors */
+    --color-stone-white: #FAF9F6;
+    --color-stone-light: #f5f5f4;
+    /* stone-50 approx */
+    --color-stone-200: #e7e5e4;
+    --color-anthracite: #2C2E35;
+    --color-vine-green: #4A5D44;
+    --color-matte-gold: #C6A664;
+    --color-white: #ffffff;
+    --color-white-90: rgba(255, 255, 255, 0.9);
+    --color-white-60: rgba(255, 255, 255, 0.6);
+    --color-black-10: rgba(0, 0, 0, 0.1);
+
+    /* Fonts */
+    --font-serif: "Cormorant Garamond", serif;
+    --font-sans: "Montserrat", sans-serif;
+
+    /* Spacing */
+    --spacing-sm: 0.5rem;
+    /* 8px */
+    --spacing-md: 1rem;
+    /* 16px */
+    --spacing-lg: 2rem;
+    /* 32px */
+    --spacing-xl: 4rem;
+    /* 64px */
+    --spacing-xxl: 6rem;
+    /* 96px */
+    --spacing-xxxl: 8rem;
+    /* 128px */
+
+    /* Container */
+    --container-width: 1200px;
+    --container-padding: 1.5rem;
+
+    /* Responsive spacing (will be adjusted for mobile) */
+    --spacing-section: 8rem;
+    --spacing-gap-responsive: 4rem;
+}
+
+/* Responsive variables for mobile */
+@media (max-width: 768px) {
+    :root {
+        --spacing-section: 4rem;
+        --spacing-gap-responsive: 2rem;
+        --container-padding: 1rem;
+    }
+}
+
+/* 2. RESET */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans);
+    background-color: var(--color-stone-white);
+    color: var(--color-anthracite);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* 3. TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-light {
+    font-weight: 300;
+}
+
+.subtitle-small {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    margin-bottom: 0.5rem;
+    color: var(--color-matte-gold);
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.tracking-wide {
+    letter-spacing: 0.05em;
+}
+
+.tracking-widest {
+    letter-spacing: 0.1em;
+}
