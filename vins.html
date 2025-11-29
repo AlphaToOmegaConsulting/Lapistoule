@@ -23,7 +23,7 @@
 
     <main>
         <!-- HERO -->
-        <section class="hero hero-md">
+        <section class="hero">
             <div class="hero-bg">
                 <img src="assets/images/accueil/hero-poster-vignes.jpg" alt="Vue panoramique des vignes du Domaine de Lapistoule sous le ciel de Cahors" />
                 <div class="hero-overlay"></div>
@@ -38,8 +38,94 @@
                     Des vins sincères, fruits d'une viticulture respectueuse et d'un savoir-faire familial.
                 </p>
             </div>
-            <div class="scroll-down-indicator">
-                <i data-lucide="chevrons-down" width="32" height="32" color="white"></i>
+            <div class="scroll-indicator">
+                <i data-lucide="arrow-down" width="32" height="32"></i>
+            </div>
+        </section>
+
+        <!-- MENU DES VINS (Ancres) -->
+        <section class="section section-bg-alt section-spacing-large">
+            <div class="container">
+                <div class="text-center max-w-text mb-xl">
+                    <span class="subtitle-small">La Sélection</span>
+                    <h2 class="value-title mb-md" style="font-size: 2.5rem;">Découvrir nos Vins</h2>
+                    <p class="text-dark text-lg opacity-80">Cliquez pour accéder au détail de chaque cuvée.</p>
+                </div>
+                <div class="wines-grid">
+                    <!-- Card 1 -->
+                    <div class="wine-card">
+                        <div class="wine-image-wrapper">
+                            <img src="/assets/images/accueil/bouteille-cuvee-tanays.webp"
+                                alt="Bouteille Cuvée Tanays - AOC Cahors 100% Malbec, vin de garde du Domaine de Lapistoule"
+                                class="wine-image" />
+                            <div class="wine-badge">Vin de Garde</div>
+                        </div>
+                        <div class="wine-content">
+                            <div>
+                                <h3 class="wine-title">Cuvée Tanays</h3>
+                                <p class="wine-desc">L'héritage. 100% Malbec, vieilles vignes, structuré et profond.</p>
+                            </div>
+                            <a href="#cuvee-tanays" class="btn btn-link">
+                                Voir le détail <i data-lucide="arrow-down" width="16"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="wine-card">
+                        <div class="wine-image-wrapper">
+                            <img src="/assets/images/accueil/bouteille-le-pas-sage.webp"
+                                alt="Bouteille Le Pas Sage - AOC Cahors 100% Malbec élevé 12 mois en barrique"
+                                class="wine-image" />
+                            <div class="wine-badge">Vin de Plaisir</div>
+                        </div>
+                        <div class="wine-content">
+                            <div>
+                                <h3 class="wine-title">Le Pas Sage</h3>
+                                <p class="wine-desc">L'élégance boisée. 100% Malbec, 12 mois barrique, fruit intense.
+                                </p>
+                            </div>
+                            <a href="#le-pas-sage" class="btn btn-link">
+                                Voir le détail <i data-lucide="arrow-down" width="16"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="wine-card">
+                        <div class="wine-image-wrapper">
+                            <img src="/assets/images/accueil/bouteille-vins-fleurdepecher.webp"
+                                alt="Bouteille Fleur de Pêcher - Rosé de saignée 100% Malbec, IGP Côtes du Lot"
+                                class="wine-image" />
+                            <div class="wine-badge">Rosé Fruité</div>
+                        </div>
+                        <div class="wine-content">
+                            <div>
+                                <h3 class="wine-title">Fleur de Pêcher</h3>
+                                <p class="wine-desc">Rosé 100% Malbec. Notes florales, fraîcheur et gourmandise.</p>
+                            </div>
+                            <a href="#fleur-de-pecher" class="btn btn-link">
+                                Voir le détail <i data-lucide="arrow-down" width="16"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="wine-card">
+                        <div class="wine-image-wrapper">
+                            <img src="/assets/images/accueil/bouteille-vins-graindeblanc.webp"
+                                alt="Bouteille Grain de Blanc - Vin blanc sec IGP Côtes du Lot, Chardonnay et Viognier"
+                                class="wine-image" />
+                            <div class="wine-badge">Blanc Sec</div>
+                        </div>
+                        <div class="wine-content">
+                            <div>
+                                <h3 class="wine-title">Grain de Blanc</h3>
+                                <p class="wine-desc">IGP Côtes du Lot. Chardonnay minéral, vif et élégant.</p>
+                            </div>
+                            <a href="#grain-de-blanc" class="btn btn-link">
+                                Voir le détail <i data-lucide="arrow-down" width="16"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -48,7 +134,7 @@
             <div class="container">
 
                 <!-- VIN 1: Grain de Blanc -->
-                <div class="product-block row">
+                <div id="grain-de-blanc" class="product-block row">
                     <div class="product-image">
                         <div class="image-backdrop"></div>
                         <img src="assets/images/vins/grain-de-blanc.webp"
@@ -81,7 +167,7 @@
                 </div>
 
                 <!-- VIN 2: Fleur de Pêcher (Reverse) -->
-                <div class="product-block row-reverse">
+                <div id="fleur-de-pecher" class="product-block row-reverse">
                     <div class="product-image">
                         <div class="image-backdrop"></div>
                         <img src="assets/images/vins/fleur-de-pecher.webp" alt="Bouteille Fleur de Pêcher - Rosé de saignée 100% Malbec, IGP Côtes du Lot"
@@ -132,7 +218,7 @@
             <div class="container">
 
                 <!-- VIN 3: Le Pas Sage -->
-                <div class="product-block row">
+                <div id="le-pas-sage" class="product-block row">
                     <div class="product-image">
                         <div class="image-backdrop"></div>
                         <img src="assets/images/vins/le-pas-sage.webp" alt="Bouteille Le Pas Sage - AOC Cahors 100% Malbec élevé 12 mois en barriques de chêne français"
@@ -165,7 +251,7 @@
                 </div>
 
                 <!-- VIN 4: Cuvée Tanays (Reverse) -->
-                <div class="product-block row-reverse">
+                <div id="cuvee-tanays" class="product-block row-reverse">
                     <div class="product-image">
                         <div class="image-backdrop"></div>
                         <img src="assets/images/vins/cuvee-tanays.webp" alt="Bouteille Cuvée Tanays - AOC Cahors sélection parcellaire, vieilles vignes 100% Malbec, vin de garde"

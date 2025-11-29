@@ -1,5 +1,6 @@
 import { createIcons, icons } from 'lucide';
 import { HEADER_TEMPLATE, FOOTER_TEMPLATE } from './layoutTemplates';
+import { initLazyLoading } from '../utils/lazyLoad';
 
 export function initGlobal() {
     try {
@@ -39,7 +40,17 @@ export function initGlobal() {
             }
         });
     } catch (error) {
-        console.error('Erreur lors de l’initialisation des icônes (Lucide):', error);
+        console.error("Erreur lors de l'initialisation des icônes (Lucide):", error);
+    }
+
+    // Initialize lazy loading for images
+    try {
+        initLazyLoading({
+            rootMargin: '100px',
+            threshold: 0.01,
+        });
+    } catch (error) {
+        console.error("Erreur lors de l'initialisation du lazy loading:", error);
     }
 }
 
