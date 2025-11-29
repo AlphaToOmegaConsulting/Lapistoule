@@ -7,18 +7,28 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 0.75rem 1.5rem;
+    padding: clamp(0.625rem, 1.5vw, 0.75rem) clamp(1rem, 2vw, 1.5rem);
+    min-height: var(--button-min-height);
     border: 1px solid transparent;
     border-radius: var(--radius-lg);
     /* rounded-full */
     font-family: var(--font-sans);
-    font-size: 0.875rem;
+    font-size: clamp(0.8125rem, 1.5vw, 0.875rem);
     font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     cursor: pointer;
     transition: all 0.3s ease;
     gap: 0.5rem;
+    text-decoration: none;
+}
+
+/* Touch target enhancement pour mobile */
+@media (max-width: 639px) and (pointer: coarse) {
+    .btn {
+        min-height: var(--touch-target-comfortable);
+        padding-block: 0.875rem;
+    }
 }
 
 .btn-primary {
@@ -422,4 +432,55 @@
 
 .text-xl {
     font-size: 1.5rem;
+}
+
+/* =========================================
+   ACCESSIBILITY - FOCUS STATES
+   ========================================= */
+
+/* Focus visible pour navigation au clavier */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+.btn:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: var(--radius-sm);
+}
+
+/* Boutons et liens - focus */
+.btn-primary:focus-visible {
+    outline-color: var(--color-secondary);
+}
+
+.btn-outline-light:focus-visible {
+    outline-color: var(--color-surface);
+}
+
+.btn-outline-dark:focus-visible {
+    outline-color: var(--color-text);
+}
+
+/* Touch devices : pas d'outline au simple tap */
+@media (hover: none) and (pointer: coarse) {
+    button:focus:not(:focus-visible),
+    a:focus:not(:focus-visible) {
+        outline: none;
+    }
+}
+
+/* Formulaires - focus states renforcés */
+.form-input:focus-visible,
+.form-textarea:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 1px;
+    border-color: var(--color-primary);
+}
+
+/* Cards interactives */
+.wine-card:focus-within {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
 }

@@ -1,11 +1,15 @@
 /* =========================================
    MAIN STYLESHEET (Orchestrator)
+   Architecture ITCSS (Inverted Triangle CSS)
    ========================================= */
+
+/* 0. Settings - Design Tokens */
+@import "./tokens.css";
 
 /* 1. Base & Reset */
 @import "./base.css";
 
-/* 2. Layout & Utilities */
+/* 2. Layout & Grid System */
 @import "./layout.css";
 
 /* 3. Components */
@@ -15,7 +19,10 @@
 @import "./header.css";
 @import "./footer.css";
 
-/* 5. Pages */
+/* 5. Utilities (dernières pour override) */
+@import "./utilities.css";
+
+/* 6. Pages (spécifiques - dernier layer) */
 @import "./pages/home.css";
 @import "./pages/domaine.css";
 @import "./pages/vins.css";

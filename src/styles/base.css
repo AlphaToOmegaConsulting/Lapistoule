@@ -157,3 +157,27 @@ h6 {
 .tracking-widest {
     letter-spacing: 0.1em;
 }
+
+/* =========================================
+   ACCESSIBILITY - REDUCED MOTION
+   ========================================= */
+
+/* Respecter les préférences utilisateur pour les animations */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Désactiver les animations spécifiques */
+    .fade-in-up,
+    .fade-element {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}
