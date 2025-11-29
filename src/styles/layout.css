@@ -56,6 +56,7 @@
     gap: var(--spacing-lg);
 }
 
+/* Mobile-first: toutes les grids commencent en 1 colonne */
 .grid-2 {
     grid-template-columns: 1fr;
 }
@@ -68,6 +69,20 @@
     grid-template-columns: 1fr;
 }
 
+/* Grid auto-responsive (sans media queries) */
+.grid-auto-fit-sm {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr));
+}
+
+.grid-auto-fit {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+}
+
+.grid-auto-fit-lg {
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+}
+
+/* Tablet: 768px+ */
 @media (min-width: 768px) {
     .grid-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -83,6 +98,7 @@
     }
 }
 
+/* Desktop: 1024px+ */
 @media (min-width: 1024px) {
     .grid-4 {
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -90,9 +106,53 @@
     }
 }
 
-/* Add custom gap utility classes */
+/* Gap utilities responsive */
+.gap-xs {
+    gap: var(--space-xs);
+}
+
+.gap-sm {
+    gap: var(--space-sm);
+}
+
+.gap-md {
+    gap: var(--space-md);
+}
+
+.gap-lg {
+    gap: var(--space-lg);
+}
+
 .gap-xl {
-    gap: var(--spacing-xl);
+    gap: var(--space-xl);
+}
+
+.gap-2xl {
+    gap: var(--space-2xl);
+}
+
+/* Gap responsive (réduit sur mobile) */
+.gap-responsive {
+    gap: var(--spacing-gap);
+    /* Uses clamp: 1rem → 4rem */
+}
+
+/* Column gap spécifique */
+.column-gap-md {
+    column-gap: var(--space-md);
+}
+
+.column-gap-lg {
+    column-gap: var(--space-lg);
+}
+
+/* Row gap spécifique */
+.row-gap-md {
+    row-gap: var(--space-md);
+}
+
+.row-gap-lg {
+    row-gap: var(--space-lg);
 }
 
 /* 3. FLEX UTILITIES */

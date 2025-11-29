@@ -124,6 +124,59 @@ h6 {
     line-height: 1.2;
 }
 
+/* Fluid typography - scales automatically from mobile to desktop */
+h1 {
+    font-size: clamp(2rem, 5vw + 1rem, 4.5rem);
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(1.75rem, 4vw + 1rem, 3.5rem);
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: clamp(1.5rem, 3vw + 0.5rem, 2.5rem);
+    line-height: 1.3;
+}
+
+h4 {
+    font-size: clamp(1.25rem, 2.5vw + 0.5rem, 2rem);
+    line-height: 1.4;
+}
+
+h5 {
+    font-size: clamp(1.125rem, 2vw + 0.5rem, 1.5rem);
+    line-height: 1.4;
+}
+
+h6 {
+    font-size: clamp(1rem, 1.5vw + 0.5rem, 1.25rem);
+    line-height: 1.5;
+}
+
+/* Body text fluid sizing */
+body {
+    font-size: clamp(0.9375rem, 1vw + 0.5rem, 1.125rem);
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* Lead paragraph (intro text) */
+.lead {
+    font-size: clamp(1.125rem, 2vw, 1.375rem);
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Small text */
+small,
+.text-sm {
+    font-size: clamp(0.8125rem, 1.5vw, 0.875rem);
+}
+
 .text-center {
     text-align: center;
 }

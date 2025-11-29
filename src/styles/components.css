@@ -306,8 +306,8 @@
 .wine-image-wrapper {
     position: relative;
     width: 100%;
-    height: 300px;
-    /* Mobile height */
+    /* Modern: Use aspect-ratio instead of fixed height */
+    aspect-ratio: 4 / 5;
     overflow: hidden;
     background-color: var(--color-stone-light);
     display: flex;
@@ -315,10 +315,10 @@
     justify-content: center;
 }
 
+/* Tablet and desktop: more vertical space */
 @media (min-width: 768px) {
     .wine-image-wrapper {
-        height: 450px;
-        /* Desktop height */
+        aspect-ratio: 3 / 4;
     }
 }
 
@@ -328,6 +328,19 @@
     object-fit: contain;
     object-position: center;
     transition: transform 0.7s;
+}
+
+/* Fallback for browsers without aspect-ratio support */
+@supports not (aspect-ratio: 1) {
+    .wine-image-wrapper {
+        height: 300px;
+    }
+
+    @media (min-width: 768px) {
+        .wine-image-wrapper {
+            height: 450px;
+        }
+    }
 }
 
 .wine-card:hover .wine-image {
