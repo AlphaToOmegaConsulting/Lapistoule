@@ -167,7 +167,7 @@
   font-size: 1.125rem;
   font-weight: 300;
   line-height: 1.6;
-  margin-bottom: 4rem;
+  margin-bottom: 3rem;
   opacity: 0.9;
 }
 
@@ -181,6 +181,7 @@
 }
 
 @keyframes bounce {
+
   0%,
   100% {
     transform: translate(-50%, -25%);
@@ -478,6 +479,7 @@ select:focus-visible,
 
 /* Touch devices : pas d'outline au simple tap */
 @media (hover: none) and (pointer: coarse) {
+
   button:focus:not(:focus-visible),
   a:focus:not(:focus-visible) {
     outline: none;

@@ -16,8 +16,9 @@
 @import './components.css';
 
 /* 4. Global Partials */
-@import './header.css';
-@import './footer.css';
+@import "./header.css";
+@import "./footer.css";
+@import "./animations.css";
 
 /* 5. Utilities (dernières pour override) */
 @import './utilities.css';

@@ -9,14 +9,16 @@
   z-index: 1000;
   padding: var(--spacing-lg) 0;
   transition: all 0.5s ease;
-  background: none;
+  background: rgba(250, 249, 246, 0.01); /* Very subtle base */
+  backdrop-filter: blur(2px); /* Initial subtle blur */
 }
 
 .main-header.scrolled {
-  background-color: var(--color-surface-veil);
-  backdrop-filter: blur(4px);
+  background-color: rgba(250, 249, 246, 0.85); /* More opacity on scroll */
+  backdrop-filter: blur(12px); /* Strong glass effect */
   padding: 1rem 0;
-  box-shadow: 0 1px 2px var(--color-black-10);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Header Links Color Logic */
@@ -27,6 +29,28 @@
   letter-spacing: 0.05em;
   color: var(--color-white);
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+@media (max-width: 639px) {
+    .header-logo {
+        align-items: flex-start;
+        font-size: 1.25rem;
+    }
+    .header-logo span {
+        display: block;
+    }
+    /* Add a pseudo-element or adjust HTML if we can't change HTML structure easily. 
+       Since we reverted to text, we can style it. 
+       Actually, to stack "DOMAINE DE" and "LAPISTOULE", we might need a width constraint or <br> 
+       Let's use a width constraint on mobile to force wrap if possible, or just standard wrapping.
+    */
+    .header-logo {
+        max-width: 150px;
+        text-align: left;
+    }
 }
 
 .nav-link {
@@ -116,7 +140,9 @@
 .mobile-menu-overlay {
   position: fixed;
   inset: 0;
-  background-color: var(--color-stone-white);
+  background-color: rgba(250, 249, 246, 0.98);
+  /* Optional: Add a subtle texture if available, or just a nice border */
+  border: 1rem solid rgba(198, 166, 100, 0.1); /* Gold border effect */
   z-index: 900;
   display: flex;
   flex-direction: column;
@@ -126,6 +152,7 @@
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease;
+  backdrop-filter: blur(5px);
 }
 
 .mobile-menu-overlay.open {
@@ -153,6 +180,7 @@
   font-family: var(--font-serif);
   font-size: 2rem;
   color: var(--color-anthracite);
+  position: relative; /* For staggered animation if we add it via JS */
 }
 
 .mobile-nav-link:hover {
@@ -173,9 +201,7 @@
     padding: var(--space-xs) 0;
   }
 
-  .header-logo {
-    font-size: clamp(1.125rem, 4vw, 1.5rem);
-  }
+  /* .header-logo logic moved up */
 
   .nav-link {
     font-size: clamp(0.75rem, 2vw, 0.875rem);

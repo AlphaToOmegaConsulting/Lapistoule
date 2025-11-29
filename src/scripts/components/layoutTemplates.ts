@@ -1,9 +1,11 @@
+import logoSombre from '../../../assets/logo_sombre.webp';
+
 export const HEADER_TEMPLATE = `
     <div class="container flex items-center justify-between">
       <a href="index.html" id="header-logo" class="header-logo">
         DOMAINE DE LAPISTOULE
       </a>
-      <nav class="hidden md-flex items-center gap-lg">
+      <nav class="hidden md:flex items-center gap-lg">
         <a href="index.html" class="nav-link" data-link="index.html">Accueil</a>
         <a href="domaine.html" class="nav-link" data-link="domaine.html">Le Domaine</a>
         <a href="vins.html" class="nav-link" data-link="vins.html">Nos Vins</a>
@@ -14,7 +16,7 @@ export const HEADER_TEMPLATE = `
           <span>Commander</span>
         </button>
       </nav>
-      <button id="mobile-menu-btn" class="mobile-menu-btn md-hidden">
+      <button id="mobile-menu-btn" class="mobile-menu-btn md:hidden">
         <i data-lucide="menu" id="menu-icon" width="28" class="menu-icon text-stone-white"></i>
       </button>
     </div>
@@ -36,7 +38,7 @@ export const FOOTER_TEMPLATE = `
     <div class="container">
       <div class="grid grid-4">
         <div>
-          <img src="/assets/logo_sombre.webp" alt="Domaine de Lapistoule" class="footer-logo-img" style="margin-bottom: 1rem;" />
+          <img src="${logoSombre}" alt="Domaine de Lapistoule" class="footer-logo-img" style="margin-bottom: 1rem; height: 3rem;" />
           <p class="text-light" style="font-size: 0.875rem; opacity: 0.6; margin-bottom: 1.5rem;">
             Vignerons indepedants a Luzech.<br />AOC Cahors & Cotes du Lot.
           </p>
@@ -86,5 +88,19 @@ export const FOOTER_TEMPLATE = `
           <a href="#">CGV</a>
         </div>
       </div>
+    </div>
+    
+    <!-- Global Components (Back to Top & Lightbox) -->
+    <button id="back-to-top" class="back-to-top" aria-label="Retour en haut">
+        <i data-lucide="arrow-up" width="24"></i>
+    </button>
+
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button id="lightbox-close" class="lightbox-close">
+                <i data-lucide="x" width="32"></i>
+            </button>
+            <img id="lightbox-img" class="lightbox-img" src="" alt="Agrandissement" />
+        </div>
     </div>
 `;
