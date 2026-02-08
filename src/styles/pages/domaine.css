@@ -13,7 +13,7 @@
   color: var(--color-white);
   margin-top: 0;
   /* Reset standard main padding */
-  background-image: url('../../assets/images/domaine/domaine-0.webp');
+  background-image: url('/assets/images/domain/hero-vineyard.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
