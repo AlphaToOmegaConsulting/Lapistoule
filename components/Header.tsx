@@ -10,10 +10,10 @@ export default function Header() {
         <a href="${withBasePath('/vins/')}" class="nav-link" data-link="/vins/">Nos Vins</a>
         <a href="${withBasePath('/visites/')}" class="nav-link" data-link="/visites/">Visites</a>
         <a href="${withBasePath('/contact/')}" class="nav-link" data-link="/contact/">Contact</a>
-        <button id="header-cta" class="btn btn-outline-light header-cta" type="button">
+        <a id="header-cta" class="btn btn-outline-light header-cta" href="${withBasePath('/contact/')}">
           <i data-lucide="shopping-bag" width="16"></i>
           <span>Commander</span>
-        </button>
+        </a>
       </nav>
       <button id="mobile-menu-btn" class="mobile-menu-btn md:hidden" aria-label="Ouvrir le menu de navigation" type="button">
         <i data-lucide="menu" id="menu-icon" width="28" class="menu-icon"></i>
@@ -30,17 +30,17 @@ export default function Header() {
           <a href="${withBasePath('/contact/')}" class="mobile-nav-link">Contact</a>
         </nav>
 
-        <button class="btn btn-primary mobile-menu-cta" type="button">
+        <a class="btn btn-primary mobile-menu-cta" href="${withBasePath('/contact/')}">
           <i data-lucide="shopping-bag" width="20"></i>
           <span>Commander</span>
-        </button>
+        </a>
 
         <div class="mobile-menu-footer flex flex-col items-center gap-sm">
           <a href="tel:0565201262" class="text-sm font-medium tracking-wide">05 65 20 12 62</a>
           <p class="text-sm text-center opacity-70">Lieu-dit La Pistoule<br>46140 Luzech</p>
           <div class="flex gap-md mt-sm">
-            <a href="https://www.instagram.com/domainedelapistoule/" target="_blank" rel="noreferrer"><i data-lucide="instagram" width="20"></i></a>
-            <a href="https://www.facebook.com/domainedelapistoule/" target="_blank" rel="noreferrer"><i data-lucide="facebook" width="20"></i></a>
+            <a href="https://www.instagram.com/domainedelapistoule/" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram" width="20"></i></a>
+            <a href="https://www.facebook.com/domainedelapistoule/" target="_blank" rel="noopener noreferrer"><i data-lucide="facebook" width="20"></i></a>
           </div>
         </div>
       </div>

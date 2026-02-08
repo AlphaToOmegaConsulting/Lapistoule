@@ -9,7 +9,7 @@ test.describe('Home Page Tests', () => {
         const hero = page.locator('#hero');
         await expect(hero).toBeVisible();
 
-        const heroTitle = page.locator('.hero-title');
+        const heroTitle = page.locator('#hero h1.hero-title');
         await expect(heroTitle).toContainText('Domaine de Lapistoule');
     });
 
@@ -24,7 +24,7 @@ test.describe('Home Page Tests', () => {
 
     test('should display wine preview section', async ({ page }) => {
         // Scroll to wines section
-        await page.locator('text=La Cave').scrollIntoViewIfNeeded();
+        await page.locator('.wines-grid').first().scrollIntoViewIfNeeded();
 
         const wineCards = page.locator('.wine-card');
         await expect(wineCards.first()).toBeVisible();
@@ -32,11 +32,11 @@ test.describe('Home Page Tests', () => {
 
     test('should have working CTA buttons', async ({ page }) => {
         // Test primary CTA
-        const primaryCTA = page.locator('a[href="vins.html"].btn-primary').first();
+        const primaryCTA = page.locator('#hero a[href$="/vins/"].btn-primary');
         await expect(primaryCTA).toBeVisible();
 
         // Test secondary CTA
-        const secondaryCTA = page.locator('a[href="visites.html"]').first();
+        const secondaryCTA = page.locator('#hero a[href$="/visites/"]');
         await expect(secondaryCTA).toBeVisible();
     });
 

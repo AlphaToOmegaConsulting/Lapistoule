@@ -31,10 +31,10 @@ test.describe('Mobile Navigation Tests', () => {
         await page.click('#mobile-menu-btn');
 
         // Click on a link in mobile menu
-        await page.click('#mobile-menu a[href="domaine.html"]');
+        await page.click('#mobile-menu a[href$="/domaine/"]');
 
         // Check navigation occurred
-        await expect(page).toHaveURL(/domaine\.html/);
+        await expect(page).toHaveURL(/\/domaine\/$/);
     });
 
     test('should be responsive on mobile', async ({ page }) => {

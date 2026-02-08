@@ -48,8 +48,8 @@
   --text-5xl: clamp(3rem, 8vw, 5rem);
 
   /* Fonts Families */
-  --font-heading: 'Cormorant Garamond', serif;
-  --font-body: 'Montserrat', sans-serif;
+  --font-heading: var(--font-cormorant), 'Cormorant Garamond', serif;
+  --font-body: var(--font-montserrat), 'Montserrat', sans-serif;
 
   /* Legacy Font Variables */
   --font-serif: var(--font-heading);

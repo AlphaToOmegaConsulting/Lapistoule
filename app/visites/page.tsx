@@ -71,11 +71,11 @@ export default function Page() {
     
                             <div className="address-block mt-md">
                                 <p className="address-text">Domaine de Lapistoule<br />Lieu-dit La Pistoule,<br />46140 Luzech, France</p>
-                                <a href="https://maps.google.com/?q=Lieu-dit+La+Pistoule+46140+Luzech+France" target="_blank" className="map-link">Voir l'itinéraire</a>
+                                <a href="https://maps.google.com/?q=Lieu-dit+La+Pistoule+46140+Luzech+France" target="_blank" rel="noopener noreferrer" className="map-link">Voir l'itinéraire</a>
                             </div>
     
                             <p className="opening-hours mt-md">
-                                Ouvert tous les jours. Merci de nous contacter avant votre venue pour vous assurer le meilleur accueil.
+                                Ouvert tous les jours : 9h00 - 12h00 / 14h00 - 19h00. Merci de nous contacter avant votre venue pour vous assurer le meilleur accueil.
                             </p>
                         </div>
                         

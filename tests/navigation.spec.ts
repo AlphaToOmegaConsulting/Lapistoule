@@ -10,27 +10,27 @@ test.describe('Navigation Tests', () => {
         await page.goto('/');
 
         // Test navigation to Domaine page
-        await page.click('a[href="domaine.html"]');
-        await expect(page).toHaveURL(/domaine\.html/);
+        await page.click('a[href$="/domaine/"]:visible');
+        await expect(page).toHaveURL(/\/domaine\/$/);
 
         // Test navigation to Vins page
         await page.goto('/');
-        await page.click('a[href="vins.html"]');
-        await expect(page).toHaveURL(/vins\.html/);
+        await page.click('a[href$="/vins/"]:visible');
+        await expect(page).toHaveURL(/\/vins\/$/);
 
         // Test navigation to Visites page
         await page.goto('/');
-        await page.click('a[href="visites.html"]');
-        await expect(page).toHaveURL(/visites\.html/);
+        await page.click('a[href$="/visites/"]:visible');
+        await expect(page).toHaveURL(/\/visites\/$/);
 
         // Test navigation to Contact page
         await page.goto('/');
-        await page.click('a[href="contact.html"]');
-        await expect(page).toHaveURL(/contact\.html/);
+        await page.click('a[href$="/contact/"]:visible');
+        await expect(page).toHaveURL(/\/contact\/$/);
     });
 
     test('should show header on all pages', async ({ page }) => {
-        const pages = ['/', '/domaine.html', '/vins.html', '/visites.html', '/contact.html'];
+        const pages = ['/', '/domaine/', '/vins/', '/visites/', '/contact/'];
 
         for (const pagePath of pages) {
             await page.goto(pagePath);
@@ -40,7 +40,7 @@ test.describe('Navigation Tests', () => {
     });
 
     test('should show footer on all pages', async ({ page }) => {
-        const pages = ['/', '/domaine.html', '/vins.html', '/visites.html', '/contact.html'];
+        const pages = ['/', '/domaine/', '/vins/', '/visites/', '/contact/'];
 
         for (const pagePath of pages) {
             await page.goto(pagePath);

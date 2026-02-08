@@ -182,7 +182,7 @@ export default function Page() {
             <div className="text-center max-w-text mb-xl">
               <span className="subtitle-small">La Cave</span>
               <h2 className="value-title mb-md" style={{}}>L'Expression du Fruit</h2>
-              <p className="text-dark text-lg opacity-80">Des rouges structurés de l'AOC Cahors aux
+              <p className="text-dark text-lg opacity-80">Des rouges structurés de l'AOP Cahors aux
                 blancs minéraux.</p>
             </div>
             <div className="wines-grid">
@@ -190,7 +190,7 @@ export default function Page() {
               <div className="wine-card" data-reveal="fade-up">
                 <div className="wine-image-wrapper">
                   <img src={withBasePath('/assets/images/home/wine-bottle-cuvee-tanays.webp')}
-                    alt="Bouteille Cuvée Tanays - AOC Cahors 100% Malbec, vin de garde du Domaine de Lapistoule"
+                    alt="Bouteille Cuvée Tanays - AOP Cahors 100% Malbec, vin de garde du Domaine de Lapistoule"
                     className="wine-image" />
                   <div className="wine-badge">Vin de Garde</div>
                 </div>
@@ -208,7 +208,7 @@ export default function Page() {
               <div className="wine-card delay-200" data-reveal="fade-up">
                 <div className="wine-image-wrapper">
                   <img src={withBasePath('/assets/images/home/wine-bottle-le-pas-sage.webp')}
-                    alt="Bouteille Le Pas Sage - AOC Cahors 100% Malbec élevé 12 mois en barrique" className="wine-image" />
+                    alt="Bouteille Le Pas Sage - AOP Cahors 100% Malbec élevé 12 mois en barrique" className="wine-image" />
                   <div className="wine-badge">Vin de Plaisir</div>
                 </div>
                 <div className="wine-content">
@@ -286,11 +286,16 @@ export default function Page() {
                     <i data-lucide="clock" className="text-primary mt-1"></i>
                     <div>
                       <strong className="block text-dark">Horaires d'ouverture</strong>
-                      <span className="text-light">Tous les jours : 9h00 - 12h00 / 14h00 - 19h00</span>
+                      <span className="text-light">Ouvert tous les jours : 9h00 - 12h00 / 14h00 - 19h00. Merci de nous contacter avant votre venue.</span>
                     </div>
                   </li>
                 </ul>
-                <a href="https://www.google.com/maps/place/Luzech" target="_blank" rel="noopener" className="btn btn-outline-dark">
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Domaine+de+Lapistoule,+Lieu-dit+La+Pistoule,+46140+Luzech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn btn-outline-dark"
+                >
                   Itinéraire Google Maps
                 </a>
               </div>

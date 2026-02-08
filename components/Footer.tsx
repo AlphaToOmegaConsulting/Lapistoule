@@ -7,13 +7,13 @@ export default function Footer() {
         <div>
           <img src="${withBasePath('/assets/brand/logo-dark.webp')}" alt="Domaine de Lapistoule" class="footer-logo-img" style="margin-bottom: 1rem; height: 3rem;" />
           <p class="text-light" style="font-size: 0.875rem; opacity: 0.6; margin-bottom: 1.5rem;">
-            Vignerons indepedants a Luzech.<br />AOC Cahors & Cotes du Lot.
+            Vignerons independants a Luzech.<br />AOP Cahors & Cotes du Lot.
           </p>
           <div class="flex gap-md">
-            <a href="https://www.instagram.com/domainedelapistoule/" target="_blank" rel="noopener" aria-label="Instagram" class="hover:text-gold transition-colors">
+            <a href="https://www.instagram.com/domainedelapistoule/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="hover:text-gold transition-colors">
               <i data-lucide="instagram" width="20"></i>
             </a>
-            <a href="https://www.facebook.com/domainedelapistoule/" target="_blank" rel="noopener" aria-label="Facebook" class="hover:text-gold transition-colors">
+            <a href="https://www.facebook.com/domainedelapistoule/" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="hover:text-gold transition-colors">
               <i data-lucide="facebook" width="20"></i>
             </a>
           </div>
@@ -38,17 +38,17 @@ export default function Footer() {
         <div>
           <h4 class="footer-heading">Horaires</h4>
           <p class="text-light" style="font-size: 0.875rem; opacity: 0.7; line-height: 1.6;">
-            <strong style="color: var(--color-stone-white);">Ouvert tous les jours</strong><br />
-            Il est preferable de nous contacter avant votre venue pour vous assurer le meilleur accueil.
+            <strong style="color: var(--color-stone-white);">Ouvert tous les jours : 9h00 - 12h00 / 14h00 - 19h00</strong><br />
+            Merci de nous contacter avant votre venue pour vous assurer le meilleur accueil.
           </p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2024 Domaine de Lapistoule. Tous droits reserves.</p>
+        <p>&copy; 2026 Domaine de Lapistoule. Tous droits reserves.</p>
         <div class="flex gap-lg">
-          <a href="#">Mentions Legales</a>
-          <a href="#">Plan du site</a>
-          <a href="#">CGV</a>
+          <a href="${withBasePath('/mentions-legales/')}">Mentions legales</a>
+          <a href="${withBasePath('/plan-du-site/')}">Plan du site</a>
+          <a href="${withBasePath('/cgv/')}">CGV</a>
         </div>
       </div>
     </div>

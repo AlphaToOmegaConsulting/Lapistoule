@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Cormorant_Garamond, Montserrat } from 'next/font/google';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import LegacyRuntime from '@/components/LegacyRuntime';
@@ -6,6 +7,18 @@ import { getSiteUrl, withBasePath } from '@/lib/base-path';
 import './globals.css';
 
 const siteUrl = getSiteUrl();
+const cormorant = Cormorant_Garamond({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-cormorant',
+  display: 'swap',
+});
+const montserrat = Montserrat({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600'],
+  variable: '--font-montserrat',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -39,15 +52,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="fr">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      <body>
+      <body className={`${cormorant.variable} ${montserrat.variable}`}>
         <LegacyRuntime />
         <Header />
         {children}

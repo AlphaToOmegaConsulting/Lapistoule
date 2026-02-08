@@ -44,7 +44,7 @@ export default function Page() {
                         <div className="wine-card">
                             <div className="wine-image-wrapper">
                                 <img src={withBasePath('/assets/images/home/wine-bottle-cuvee-tanays.webp')}
-                                    alt="Bouteille Cuvée Tanays - AOC Cahors 100% Malbec, vin de garde du Domaine de Lapistoule"
+                                    alt="Bouteille Cuvée Tanays - AOP Cahors 100% Malbec, vin de garde du Domaine de Lapistoule"
                                     className="wine-image" />
                                 <div className="wine-badge">Vin de Garde</div>
                             </div>
@@ -62,7 +62,7 @@ export default function Page() {
                         <div className="wine-card">
                             <div className="wine-image-wrapper">
                                 <img src={withBasePath('/assets/images/home/wine-bottle-le-pas-sage.webp')}
-                                    alt="Bouteille Le Pas Sage - AOC Cahors 100% Malbec élevé 12 mois en barrique"
+                                    alt="Bouteille Le Pas Sage - AOP Cahors 100% Malbec élevé 12 mois en barrique"
                                     className="wine-image" />
                                 <div className="wine-badge">Vin de Plaisir</div>
                             </div>
@@ -209,7 +209,7 @@ export default function Page() {
                     <div id="le-pas-sage" className="product-block row">
                         <div className="product-image" data-reveal="fade-right">
                             <div className="image-backdrop"></div>
-                            <img src={withBasePath('/assets/images/wines/le-pas-sage-bottle.webp')} alt="Bouteille Le Pas Sage - AOC Cahors 100% Malbec élevé 12 mois en barriques de chêne français"
+                            <img src={withBasePath('/assets/images/wines/le-pas-sage-bottle.webp')} alt="Bouteille Le Pas Sage - AOP Cahors 100% Malbec élevé 12 mois en barriques de chêne français"
                                 className="bottle-img" />
                         </div>
                         <div className="product-content" data-reveal="fade-left">
@@ -242,7 +242,7 @@ export default function Page() {
                     <div id="cuvee-tanays" className="product-block row-reverse">
                         <div className="product-image" data-reveal="fade-left">
                             <div className="image-backdrop"></div>
-                            <img src={withBasePath('/assets/images/wines/cuvee-tanays-bottle.webp')} alt="Bouteille Cuvée Tanays - AOC Cahors sélection parcellaire, vieilles vignes 100% Malbec, vin de garde"
+                            <img src={withBasePath('/assets/images/wines/cuvee-tanays-bottle.webp')} alt="Bouteille Cuvée Tanays - AOP Cahors sélection parcellaire, vieilles vignes 100% Malbec, vin de garde"
                                 className="bottle-img" />
                         </div>
                         <div className="product-content" data-reveal="fade-right">
