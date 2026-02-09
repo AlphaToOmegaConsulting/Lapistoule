@@ -44,11 +44,16 @@ export default function Footer() {
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2026 Domaine de Lapistoule. Tous droits reserves.</p>
-        <div class="flex gap-lg">
-          <a href="${withBasePath('/mentions-legales/')}">Mentions legales</a>
-          <a href="${withBasePath('/plan-du-site/')}">Plan du site</a>
-          <a href="${withBasePath('/cgv/')}">CGV</a>
+        <div class="footer-bottom-row">
+          <p>&copy; 2026 Domaine de Lapistoule. Tous droits reserves.</p>
+          <div class="flex gap-lg">
+            <a href="${withBasePath('/mentions-legales/')}">Mentions legales</a>
+            <a href="${withBasePath('/plan-du-site/')}">Plan du site</a>
+            <a href="${withBasePath('/cgv/')}">CGV</a>
+          </div>
+        </div>
+        <div class="footer-legal">
+          L'abus d'alcool est dangereux pour la sante, a consommer avec moderation. Vente d'alcool interdite aux mineurs (moins de 18 ans).
         </div>
       </div>
     </div>

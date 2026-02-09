@@ -110,7 +110,7 @@ export default function Page() {
             <div className="visit-content">
               <h2 className="section-title">Venez goûter à notre histoire</h2>
               <p className="text-dark mb-lg">
-                Notre histoire se déguste mieux un verre à la main. Passez nous voir au domaine pour découvrir le fruit de ce travail séculaire.
+                Notre histoire se raconte mieux un verre à la main. Venez au domaine pour découvrir le fruit d&apos;un travail patient, transmis de génération en génération.
               </p>
               <div className="flex gap-md justify-center">
                 <a href={withBasePath('/visites/')} className="btn btn-primary">Réserver une dégustation</a>
