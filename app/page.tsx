@@ -112,11 +112,11 @@ export default function Page() {
                 <div className="divider-gold">
                 </div>
                 <p className="text-light text-lg">
-                  Le vin se comprend mieux là où il naît. Nous vous accueillons toute l'année au chai. Profitez-en pour
-                  découvrir le « tour de l’île » de Luzech à pied.
+                  Entrez dans notre chai et découvrez nos vins là où ils naissent. Dégustation commentée, histoire du
+                  domaine, balade autour de Luzech.
                 </p>
                 <div className="mt-md">
-                  <a href={withBasePath('/visites/')} className="btn btn-primary btn-square">Réserver une visite</a>
+                  <a href={withBasePath('/visites/')} className="btn btn-primary btn-square">Réserver ma visite</a>
                 </div>
               </div>
               <div className="quote-box">
