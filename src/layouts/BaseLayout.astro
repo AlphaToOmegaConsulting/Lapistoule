@@ -7,12 +7,14 @@ interface Props {
   title?: string;
   description: string;
   canonical: string;
+  ga4Id?: string;
 }
 
 const {
   title = 'Domaine de Lapistoule - Vins de Cahors',
   description,
   canonical,
+  ga4Id,
 } = Astro.props;
 
 const siteUrl = new URL(Astro.site?.toString() || 'https://domainedelapistoule.com');
@@ -48,6 +50,17 @@ const ogImage = new URL('/assets/images/home/hero-vineyard-poster.jpg', siteUrl)
     <meta name="twitter:image" content={ogImage} />
 
     <title>{title}</title>
+    {ga4Id && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${ga4Id}`}></script>
+        <script define:vars={{ ga4Id }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', ga4Id);
+        </script>
+      </>
+    )}
   </head>
   <body>
     <Header />
