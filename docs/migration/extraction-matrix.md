@@ -1,5 +1,7 @@
 # Extraction Matrix (extract-from-nextjs)
 
+> Archive de migration: les fichiers Next.js mentionnés ci-dessous ont été supprimés du dépôt après bascule complète vers Astro + Cloudflare Pages.
+
 ## Routes P0
 
 | Slug | Source | Astro target | H1 |
@@ -36,4 +38,3 @@
 - Back to top
 - Lightbox vins
 - Soumission contact simulée
-

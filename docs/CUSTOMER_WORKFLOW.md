@@ -1,6 +1,6 @@
 # Workflow client (modifications du site en toute sécurité)
 
-Ce site est un site statique Next.js publié sur GitHub Pages.
+Ce site est un site statique Astro déployé sur Cloudflare Pages.
 
 ## Comment demander un changement
 Expliquez simplement ce que vous voulez, en langage courant.
@@ -42,7 +42,7 @@ Pour les changements visibles (texte, images, mise en page):
 - Si le premier résultat ne vous convient pas, l'agent utilise Playwright et fournit des captures avant/après.
 
 ## Remplacer une image (simple)
-1) Déposez le nouveau fichier dans `images_a_integrer` (à la racine du projet).  
+1) Déposez le nouveau fichier dans `images_a_integrer` (à la racine du projet).
 2) Indiquez:
 - le nom du fichier,
 - où il doit apparaître (page + emplacement).
@@ -59,12 +59,12 @@ Notes:
 - `npm install` (première fois)
 - `npm run dev`
 3) Ouvrir:
-- http://localhost:3000
+- http://localhost:4321
 4) Vérifier les pages importantes:
 - Accueil, Domaine, Vins, Visites, Contact
 
 ## Publication
-Quand les changements sont poussés sur `main`, GitHub Actions reconstruit et publie le site.
+Quand les changements sont poussés sur `main`, Cloudflare Pages reconstruit et publie le site.
 
 Si quelque chose ne va pas après publication, précisez:
 - la page concernée,
