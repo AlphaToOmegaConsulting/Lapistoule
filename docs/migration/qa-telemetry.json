@@ -1,0 +1,50 @@
+[
+  {
+    "slug": "home",
+    "h1": "Domaine de Lapistoule\nL’Âme du Malbec au Cœur de Luzech",
+    "linkCount": 36,
+    "textLength": 3298
+  },
+  {
+    "slug": "domaine",
+    "h1": "L'Héritage Lapistoule\nUne Épopée Familiale au Cœur de Cahors",
+    "linkCount": 28,
+    "textLength": 2324
+  },
+  {
+    "slug": "vins",
+    "h1": "Nos Vins\nL'expression du Terroir de Luzech",
+    "linkCount": 32,
+    "textLength": 3032
+  },
+  {
+    "slug": "visites",
+    "h1": "Visites & Rencontres\nRencontrons-nous au cour des vignes de Luzech.",
+    "linkCount": 29,
+    "textLength": 1358
+  },
+  {
+    "slug": "contact",
+    "h1": "Contactez-nous",
+    "linkCount": 26,
+    "textLength": 902
+  },
+  {
+    "slug": "mentions-legales",
+    "h1": "Mentions légales",
+    "linkCount": 25,
+    "textLength": 1073
+  },
+  {
+    "slug": "cgv",
+    "h1": "Conditions générales de vente",
+    "linkCount": 25,
+    "textLength": 1004
+  },
+  {
+    "slug": "plan-du-site",
+    "h1": "Plan du site",
+    "linkCount": 32,
+    "textLength": 736
+  }
+]

@@ -4,6 +4,9 @@
  */
 
 :root {
+  --font-cormorant: 'Cormorant Garamond';
+  --font-montserrat: 'Montserrat';
+
   /* ================================
      BREAKPOINTS (référence - utilisés dans media queries)
      ================================ */

@@ -1,0 +1,321 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Domaine de Lapistoule - Vins de Cahors"
+  description="La pierre entouree d eau. Decouvrez le domaine, nos cuvees et les visites a Luzech au coeur du vignoble de Cahors."
+  canonical="/"
+>
+<main>
+        
+        <section id="hero" class="hero">
+          <div class="hero-bg">
+            <video autoplay muted loop playsinline poster="/assets/images/home/hero-vineyard-poster.jpg">
+              <source src="/assets/videos/home/hero-background.mp4" type="video/mp4" />
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-gradient"></div>
+          </div>
+          <div class="hero-content">
+            <h1 class="hero-title" data-reveal="fade-up">
+              Domaine de Lapistoule
+              <span class="hero-subtitle">L’Âme du Malbec au Cœur de Luzech</span>
+            </h1>
+            <p class="hero-text delay-300" data-reveal="fade-up">
+              « La Pierre entourée d’Eau ». Vignerons de père en fils depuis 5 générations sur la presqu’île de Luzech. Une
+              viticulture durable certifiée HVE.
+            </p>
+            <div class="flex flex-col md:flex gap-md justify-center delay-500" data-reveal="fade-up">
+              <a href="/vins/" class="btn btn-primary btn-square">Découvrir nos Cuvées</a>
+              <a href="/visites/" class="btn btn-outline-light btn-square">Nous rendre visite</a>
+            </div>
+          </div>
+          <div class="scroll-indicator">
+            <i data-lucide="arrow-down"></i>
+          </div>
+        </section>
+    
+        
+        <section class="section section-bg-light section-spacing-large">
+          <div class="container">
+            <div class="text-center max-w-text mb-xl" data-reveal="fade-up">
+              <span class="subtitle-small">Notre Philosophie</span>
+              <h2 class="section-title mb-md">L'Esprit Lapistoule</h2>
+              <p class="text-dark text-lg">
+                Plus qu'un vin, nous cultivons un lien charnel avec notre terre. Trois piliers guident notre travail au
+                quotidien.
+              </p>
+            </div>
+    
+            <div class="grid grid-3 gap-lg">
+              
+              <div class="feature-card" data-reveal="fade-up">
+                <div class="card-image-container">
+                  <img src="/assets/images/domain/history-roots.webp"
+                    alt="Vignes anciennes du Domaine de Lapistoule, héritage familial depuis 1860" class="card-image" />
+                </div>
+                <h3 class="value-title" >Héritage Séculaire</h3>
+                <p class="text-dark opacity-80">
+                  Depuis 1860, cinq générations se transmettent les secrets de nos parcelles. Une histoire de famille, de
+                  Jean-Marc à Mathieu.
+                </p>
+              </div>
+    
+              
+              <div class="feature-card delay-200" data-reveal="fade-up">
+                <div class="card-image-container">
+                  <img src="/assets/images/domain/history-modernization.webp"
+                    alt="Vue panoramique du terroir de Luzech, vignoble sur la presqu'île entourée par le Lot"
+                    class="card-image" />
+                </div>
+                <h3 class="value-title" >Terroir Singulier</h3>
+                <p class="text-dark opacity-80">
+                  Niché sur l'isthme de Luzech, notre vignoble profite d'un microclimat unique, entre la fraîcheur du Lot et
+                  la chaleur des causses.
+                </p>
+              </div>
+    
+              
+              <div class="feature-card delay-400" data-reveal="fade-up">
+                <div class="card-image-container">
+                  <img src="/assets/images/domain/history-sustainable.webp"
+                    alt="Vigneron dans les vignes pratiquant une viticulture durable certifiée Haute Valeur Environnementale"
+                    class="card-image" />
+                </div>
+                <h3 class="value-title" >Engagement HVE</h3>
+                <p class="text-dark opacity-80">
+                  Certifiés Haute Valeur Environnementale, nous préservons la biodiversité pour offrir des vins vivants et
+                  sincères.
+                </p>
+              </div>
+            </div>
+    
+            <div class="text-center mt-xl">
+              <a href="/domaine/" class="btn btn-outline-dark">En savoir plus sur le domaine</a>
+            </div>
+          </div>
+        </section>
+    
+        
+        <section class="section section-bg-green experience-section section-spacing-large">
+          <div class="experience-bg-text">
+            <img src="/assets/images/home/chai-barrels-background.jpg" alt="" />
+          </div>
+          <div class="container relative">
+            <div class="grid grid-2 items-center gap-xl">
+              <div>
+                <h2 class="hero-title mb-md" >Vivez l'Expérience <br />Lapistoule
+                </h2>
+                <div class="divider-gold">
+                </div>
+                <p class="text-light text-lg">
+                  Entrez dans notre chai et découvrez nos vins là où ils naissent. Dégustation commentée, histoire du
+                  domaine, balade autour de Luzech.
+                </p>
+                <div class="mt-md">
+                  <a href="/visites/" class="btn btn-primary btn-square">Réserver ma visite</a>
+                </div>
+              </div>
+              <div class="quote-box">
+                <i data-lucide="quote"
+                  ></i>
+                <blockquote class="relative">
+                  <p class="quote-text">
+                    "Une superbe découverte au cœur de Luzech. Des vins authentiques et un accueil chaleureux."
+                  </p>
+                  <footer class="flex items-center gap-md">
+                    <div ></div>
+                    <cite class="uppercase tracking-widest text-light"
+                      >Un visiteur du domaine</cite>
+                  </footer>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        
+        <section class="section section-spacing-large">
+          <div class="container">
+            <div class="text-center max-w-text mb-xl">
+              <span class="subtitle-small">La Vie du Domaine</span>
+              <h2 class="section-title mb-md">Actualités & Événements</h2>
+            </div>
+    
+            <div class="grid grid-3 gap-lg">
+              
+              <article class="news-card" data-reveal="fade-up">
+                <span class="news-date">24 Septembre 2024</span>
+                <h3 class="news-title">Début des Vendanges 2024</h3>
+                <p class="news-excerpt">
+                  Le millésime s'annonce prometteur. Nos équipes sont à pied d'œuvre pour récolter un Malbec à parfaite maturité.
+                </p>
+              </article>
+    
+              
+              <article class="news-card delay-200" data-reveal="fade-up">
+                <span class="news-date">15 Août 2024</span>
+                <h3 class="news-title">Soirée Jazz & Vin</h3>
+                <p class="news-excerpt">
+                  Retour en images sur notre soirée estivale. Dégustation de notre rosé Fleur de Pêcher sous les étoiles.
+                </p>
+              </article>
+    
+              
+              <article class="news-card delay-400" data-reveal="fade-up">
+                <span class="news-date">10 Juin 2024</span>
+                <h3 class="news-title">Médaille d'Or au Concours Général</h3>
+                <p class="news-excerpt">
+                  Notre Cuvée Tanays 2020 a été récompensée. Une fierté pour toute l'équipe du domaine.
+                </p>
+              </article>
+            </div>
+          </div>
+        </section>
+    
+        
+        <section class="section section-bg-alt section-spacing-large">
+          <div class="container">
+            <div class="text-center max-w-text mb-xl">
+              <span class="subtitle-small">La Cave</span>
+              <h2 class="value-title mb-md" >L'Expression du Fruit</h2>
+              <p class="text-dark text-lg opacity-80">Des rouges structurés de l'AOP Cahors aux
+                blancs minéraux.</p>
+            </div>
+            <div class="wines-grid">
+              
+              <div class="wine-card" data-reveal="fade-up">
+                <div class="wine-image-wrapper">
+                  <img src="/assets/images/home/wine-bottle-cuvee-tanays.webp"
+                    alt="Bouteille Cuvée Tanays - AOP Cahors 100% Malbec, vin de garde du Domaine de Lapistoule"
+                    class="wine-image" />
+                  <div class="wine-badge">Vin de Garde</div>
+                </div>
+                <div class="wine-content">
+                  <div>
+                    <h3 class="wine-title">Cuvée Tanays</h3>
+                    <p class="wine-desc">L'héritage. 100% Malbec, vieilles vignes, structuré et profond.</p>
+                  </div>
+                  <a href="/vins/" class="btn btn-link">
+                    Découvrir <i data-lucide="arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="wine-card delay-200" data-reveal="fade-up">
+                <div class="wine-image-wrapper">
+                  <img src="/assets/images/home/wine-bottle-le-pas-sage.webp"
+                    alt="Bouteille Le Pas Sage - AOP Cahors 100% Malbec élevé 12 mois en barrique" class="wine-image" />
+                  <div class="wine-badge">Vin de Plaisir</div>
+                </div>
+                <div class="wine-content">
+                  <div>
+                    <h3 class="wine-title">Le Pas Sage</h3>
+                    <p class="wine-desc">L'élégance boisée. 100% Malbec, 12 mois barrique, fruit intense.</p>
+                  </div>
+                  <a href="/vins/" class="btn btn-link">
+                    Découvrir <i data-lucide="arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="wine-card delay-300" data-reveal="fade-up">
+                <div class="wine-image-wrapper">
+                  <img src="/assets/images/home/wine-bottle-fleur-de-pecher.webp"
+                    alt="Bouteille Fleur de Pêcher - Rosé de saignée 100% Malbec, IGP Côtes du Lot" class="wine-image" />
+                  <div class="wine-badge">Rosé Fruité</div>
+                </div>
+                <div class="wine-content">
+                  <div>
+                    <h3 class="wine-title">Fleur de Pêcher</h3>
+                    <p class="wine-desc">Rosé 100% Malbec. Notes florales, fraîcheur et gourmandise.</p>
+                  </div>
+                  <a href="/vins/" class="btn btn-link">
+                    Découvrir <i data-lucide="arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+              
+              <div class="wine-card delay-400" data-reveal="fade-up">
+                <div class="wine-image-wrapper">
+                  <img src="/assets/images/home/wine-bottle-grain-de-blanc.webp"
+                    alt="Bouteille Grain de Blanc - Vin blanc sec IGP Côtes du Lot, Chardonnay et Viognier"
+                    class="wine-image" />
+                  <div class="wine-badge">Blanc Sec</div>
+                </div>
+                <div class="wine-content">
+                  <div>
+                    <h3 class="wine-title">Grain de Blanc</h3>
+                    <p class="wine-desc">IGP Côtes du Lot. Chardonnay minéral, vif et élégant.</p>
+                  </div>
+                  <a href="/vins/" class="btn btn-link">
+                    Découvrir <i data-lucide="arrow-right"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="text-center mt-xl">
+              <a href="/vins/" class="btn btn-primary btn-square">Accéder à toute la cave</a>
+            </div>
+          </div>
+        </section>
+    
+        
+        <section class="section section-bg-light location-section section-spacing-large">
+          <div class="container">
+            <div class="grid grid-2 items-center gap-xl">
+              <div>
+                <span class="subtitle-small">Nous Trouver</span>
+                <h2 class="section-title mb-md">Au Cœur du Quercy</h2>
+                <p class="text-dark text-lg mb-lg">
+                  Situé sur la presqu'île de Luzech, entouré par le Lot, notre domaine bénéficie d'un terroir exceptionnel.
+                  À seulement 20 minutes de Cahors.
+                </p>
+                <ul class="mb-lg space-y-4">
+                  <li class="flex items-start gap-md mb-sm">
+                    <i data-lucide="map-pin" class="text-primary mt-1"></i>
+                    <div>
+                      <strong class="block text-dark">Domaine de Lapistoule</strong>
+                      <span class="text-light">Lieu-dit La Pistoule, 46140 Luzech</span>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-md">
+                    <i data-lucide="clock" class="text-primary mt-1"></i>
+                    <div>
+                      <strong class="block text-dark">Horaires d'ouverture</strong>
+                      <span class="text-light">Ouvert tous les jours : 9h00 - 12h00 / 14h00 - 19h00. Merci de nous contacter avant votre venue.</span>
+                    </div>
+                  </li>
+                </ul>
+                <a
+                  href="https://www.google.com/maps/search/?api=1&query=Domaine+de+Lapistoule,+Lieu-dit+La+Pistoule,+46140+Luzech"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="btn btn-outline-dark"
+                >
+                  Itinéraire Google Maps
+                </a>
+              </div>
+              <div class="location-map-container shadow-lg">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45686.97416738596!2d1.261273977536965!3d44.47895237910168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12ac6506462719f1%3A0x406c69c21e64620!2s46140%20Luzech!5e0!3m2!1sfr!2sfr!4v1709300000000!5m2!1sfr!2sfr"
+                   allowfullscreen loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        
+        <section class="section section-bg-light section-spacing-large"
+          >
+          <div class="container text-center max-w-text">
+            <h2 class="value-title mb-md" >Prêt à déguster nos cuvées ?</h2>
+            <p class="text-light text-lg mb-lg">Passez nous voir au domaine à Luzech ou
+              contactez-nous.</p>
+            <a href="/contact/" class="btn btn-outline-dark btn-square">Planifier votre visite / Nous contacter</a>
+          </div>
+        </section>
+      </main>
+</BaseLayout>

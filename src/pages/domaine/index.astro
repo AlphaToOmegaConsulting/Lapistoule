@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Le Domaine | Domaine de Lapistoule"
+  description="Decouvrez l histoire du Domaine de Lapistoule a Luzech, de 1860 a aujourd hui, entre tradition familiale et viticulture durable."
+  canonical="/domaine/"
+>
+<main>
+        
+        <section class="hero hero--short">
+          <div class="hero-bg">
+            <img src="/assets/images/domain/hero-vineyard.webp" alt="Vignes anciennes du Domaine de Lapistoule à Luzech avec vue sur les terrasses argilo-calcaires" />
+            <div class="hero-overlay"></div>
+            <div class="hero-gradient"></div>
+          </div>
+          <div class="hero-content">
+            <h1 class="hero-title" data-reveal="fade-up">
+              L'Héritage Lapistoule
+              <span class="hero-subtitle">Une Épopée Familiale au Cœur de Cahors</span>
+            </h1>
+            <p class="hero-text delay-300" data-reveal="fade-up">
+              Plus d'un siècle de passion sur les terres de Luzech. Découvrez comment une simple polyculture est devenue, en 150 ans, un vignoble fier de son appellation.
+            </p>
+          </div>
+          <a href="#history-start" class="scroll-indicator" aria-label="Accéder au contenu principal">
+            <i data-lucide="arrow-down"></i>
+          </a>
+        </section>
+    
+        
+        <section id="history-start" class="section section-bg-light">
+          <div class="container">
+            <div class="grid grid-2 items-center gap-xl">
+              <div data-reveal="fade-right">
+                <img src="/assets/images/domain/history-roots.webp" alt="Photographie historique des origines du Domaine de Lapistoule en 1860, polyculture traditionnelle" class="img-card-light" />
+              </div>
+              <div class="history-content delay-300" data-reveal="fade-left">
+                <div class="date-separator"></div>
+                <span class="history-date">1860 - Début XXe</span>
+                <h2 class="section-title">Les Racines Profondes</h2>
+                <p class="text-dark mb-md">
+                  C’est au milieu du XIXe siècle, sous le Second Empire, que l’histoire familiale prend racine. À cette époque, le paysage de Luzech est bien différent. La vigne n'est qu'une culture parmi d'autres : on y cultive le tabac, les noyers, les pêchers et quelques rangs de vigne pour la consommation personnelle.
+                </p>
+                <p class="styled-quote">
+                  C’est au tournant du XXe siècle que la vocation du domaine s'affirme. La vigne gagne du terrain sur les vergers, et les premières bouteilles "maison" voient le jour.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        
+        <section class="section section-bg-alt">
+          <div class="container">
+            <div class="grid grid-2 items-center gap-xl">
+              <div class="order-2 md:order-1 history-content" data-reveal="fade-right">
+                <div class="date-separator"></div>
+                <span class="history-date">1970 - 1990</span>
+                <h2 class="section-title">L'Impulsion de Jean-Marc</h2>
+                <p class="mb-md">
+                  Dans les années 70, le vignoble français se transforme, et Lapistoule aussi. Jean-Marc reprend les rênes avec une vision claire : moderniser pour mieux révéler le Malbec.
+                </p>
+                <ul class="list-check">
+                  <li>Restructuration complète des parcelles</li>
+                  <li>Construction d'un chai moderne</li>
+                  <li>Création du premier espace de dégustation</li>
+                </ul>
+              </div>
+              <div class="order-1 md:order-2 delay-300" data-reveal="fade-left">
+                <img src="/assets/images/domain/history-modernization.webp" alt="Construction du chai moderne dans les années 1970 sous l'impulsion de Jean-Marc" class="img-card-dark" />
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        
+        <section class="section section-bg-green">
+          <div class="container">
+            <div class="grid grid-2 items-center gap-xl">
+              <div data-reveal="fade-right">
+                <img src="/assets/images/domain/history-sustainable.webp" alt="Mathieu, vigneron de la nouvelle génération, dans les vignes pratiquant une viticulture durable HVE" class="img-card-medium" />
+              </div>
+              <div class="sustainable-content delay-300" data-reveal="fade-left">
+                <div class="date-separator"></div>
+                <span class="history-date">2019 - Aujourd'hui</span>
+                <h2 class="section-title text-light">Le Tournant Durable</h2>
+                <p class="text-light mb-md">
+                  En 2019, une nouvelle page s'écrit avec l'arrivée de Mathieu. Héritier du savoir-faire de Jean-Marc, il apporte une sensibilité nouvelle face aux défis climatiques et environnementaux.
+                </p>
+                <div class="bg-glass p-md rounded">
+                  <h3 class="text-light text-lg mb-sm flex items-center gap-sm">
+                    <i data-lucide="leaf" class="text-primary"></i> Certification HVE
+                  </h3>
+                  <p class="text-light text-sm opacity-80">
+                    Le domaine est engagé dans une viticulture respectueuse : enherbement maîtrisé, réduction des intrants et respect des cycles naturels.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+        
+        <section class="section section-visit section-bg-light text-center">
+          <div class="container">
+            <div class="visit-content">
+              <h2 class="section-title">Venez goûter à notre histoire</h2>
+              <p class="text-dark mb-lg">
+                Notre histoire se raconte mieux un verre à la main. Venez au domaine pour découvrir le fruit d&apos;un travail patient, transmis de génération en génération.
+              </p>
+              <div class="flex gap-md justify-center">
+                <a href="/visites/" class="btn btn-primary">Réserver une dégustation</a>
+                <a href="/vins/" class="btn btn-outline-dark">Découvrir nos vins</a>
+              </div>
+            </div>
+          </div>
+        </section>
+    
+      </main>
+</BaseLayout>
