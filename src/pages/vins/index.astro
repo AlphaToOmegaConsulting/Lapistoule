@@ -7,7 +7,7 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   description="Explorez les cuvees du Domaine de Lapistoule: Malbec de Cahors, rose de saignee et blanc sec IGP Cotes du Lot."
   canonical="/vins/"
 >
-<main>
+<main class="page-vins">
             
             <section class="hero">
                 <div class="hero-bg">
@@ -107,6 +107,42 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                                     <p class="wine-desc">IGP Côtes du Lot. Chardonnay minéral, vif et élégant.</p>
                                 </div>
                                 <a href="#grain-de-blanc" class="btn btn-link">
+                                    Voir le détail <i data-lucide="arrow-down"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="wine-card">
+                            <div class="wine-image-wrapper">
+                                <img src="/assets/images/home/wine-bottle-cuvee-tanays.webp"
+                                    alt="Bouteille Rive Haute - AOP Cahors, assemblage Malbec, Merlot et Tannat"
+                                    class="wine-image" />
+                                <div class="wine-badge">Nouveauté 2026</div>
+                            </div>
+                            <div class="wine-content">
+                                <div>
+                                    <h3 class="wine-title">Rive Haute</h3>
+                                    <p class="wine-desc">AOP Cahors. Malbec majoritaire, Merlot et Tannat, intense et soyeux.</p>
+                                </div>
+                                <a href="#rive-haute" class="btn btn-link">
+                                    Voir le détail <i data-lucide="arrow-down"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="wine-card">
+                            <div class="wine-image-wrapper">
+                                <img src="/assets/images/home/wine-bottle-fleur-de-pecher.webp"
+                                    alt="Bouteille Brume de Luzech - IGP Côtes du Lot, assemblage rosé de Malbec et Cabernet Franc"
+                                    class="wine-image" />
+                                <div class="wine-badge">Nouveauté 2026</div>
+                            </div>
+                            <div class="wine-content">
+                                <div>
+                                    <h3 class="wine-title">Brume de Luzech</h3>
+                                    <p class="wine-desc">IGP Côtes du Lot. Rosé de pressurage Malbec & Cabernet Franc, frais et floral.</p>
+                                </div>
+                                <a href="#brume-de-luzech" class="btn btn-link">
                                     Voir le détail <i data-lucide="arrow-down"></i>
                                 </a>
                             </div>
@@ -258,6 +294,64 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
                                 </li>
                             </ul>
                             
+                        </div>
+                    </div>
+                    
+                    <div id="rive-haute" class="product-block row">
+                        <div class="product-image" data-reveal="fade-right">
+                            <div class="image-backdrop"></div>
+                            <img src="/assets/images/wines/cuvee-tanays-bottle.webp"
+                                alt="Bouteille Rive Haute - AOP Cahors, assemblage Malbec, Merlot et Tannat"
+                                class="bottle-img" />
+                        </div>
+                        <div class="product-content" data-reveal="fade-left">
+                            <span class="badge">NOUVEAUTÉ - ROUGE DE CARACTÈRE</span>
+                            <h2 class="product-title serif">Rive Haute</h2>
+                            <h3 class="product-subtitle">AOP Cahors - 70% Malbec, 20% Merlot, 10% Tannat</h3>
+                            <p class="product-desc">
+                                Une cuvée contemporaine pensée pour conjuguer la profondeur du Malbec et la souplesse d'un
+                                élevage court. Un rouge précis, épicé, idéal à table.
+                            </p>
+                            <ul class="product-attributes">
+                                <li><span class="attr-label">Nez :</span> Cassis, violette, poivre noir, touche toastée.</li>
+                                <li><span class="attr-label">Bouche :</span> Attaque ample, tanins veloutés, finale fraîche.</li>
+                                <li><span class="attr-label">Accords :</span> Côte de veau, tajine d'agneau, tomme affinée.</li>
+                            </ul>
+                            <div class="product-actions">
+                                <span class="btn-download btn-download-disabled" aria-disabled="true">
+                                    <i data-lucide="file-down"></i>
+                                    Fiche technique en préparation
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="brume-de-luzech" class="product-block row-reverse">
+                        <div class="product-image" data-reveal="fade-left">
+                            <div class="image-backdrop"></div>
+                            <img src="/assets/images/wines/fleur-de-pecher-bottle.webp"
+                                alt="Bouteille Brume de Luzech - IGP Côtes du Lot, rosé de pressurage Malbec et Cabernet Franc"
+                                class="bottle-img" />
+                        </div>
+                        <div class="product-content" data-reveal="fade-right">
+                            <span class="badge">NOUVEAUTÉ - ROSÉ DE PRESSURAGE</span>
+                            <h2 class="product-title serif">Brume de Luzech</h2>
+                            <h3 class="product-subtitle">IGP Côtes du Lot - 60% Malbec, 40% Cabernet Franc</h3>
+                            <p class="product-desc">
+                                Un rosé de printemps aux parfums délicats, élaboré pour les moments conviviaux. Profil sec,
+                                aérien et gourmand, avec une belle tension minérale.
+                            </p>
+                            <ul class="product-attributes">
+                                <li><span class="attr-label">Nez :</span> Framboise fraîche, pivoine, zeste de pamplemousse.</li>
+                                <li><span class="attr-label">Bouche :</span> Fine, saline, finale citronnée et élégante.</li>
+                                <li><span class="attr-label">Accords :</span> Carpaccio de dorade, cuisine provençale, tapas.</li>
+                            </ul>
+                            <div class="product-actions">
+                                <span class="btn-download btn-download-disabled" aria-disabled="true">
+                                    <i data-lucide="file-down"></i>
+                                    Fiche technique en préparation
+                                </span>
+                            </div>
                         </div>
                     </div>
     

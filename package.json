@@ -17,7 +17,9 @@
     "test:debug": "playwright test --debug"
   },
   "dependencies": {
-    "astro": "^5.2.0",
+    "@fontsource/cormorant-garamond": "^5.2.11",
+    "@fontsource/montserrat": "^5.2.8",
+    "astro": "^5.18.0",
     "lucide": "^0.555.0"
   },
   "devDependencies": {

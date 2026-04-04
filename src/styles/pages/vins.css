@@ -263,6 +263,19 @@
   transform: translateY(2px); /* Petite animation de l'icône vers le bas */
 }
 
+.btn-download-disabled {
+  border-color: var(--color-stone-200);
+  color: rgba(44, 46, 53, 0.65);
+  cursor: not-allowed;
+}
+
+.btn-download-disabled:hover {
+  background-color: transparent;
+  color: rgba(44, 46, 53, 0.65);
+  transform: none;
+  box-shadow: none;
+}
+
 /* 6. RESPONSIVE (MOBILE & TABLET)
    ----------------------------------------- */
 
@@ -362,4 +375,574 @@
 .fade-element.is-visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* 7. OVER-ANIMATED EXPERIENCE (VINS PAGE ONLY)
+   ----------------------------------------- */
+.page-vins {
+  --vins-ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.page-vins section {
+  animation: vinsSectionReveal 1.2s var(--vins-ease) both;
+}
+
+.page-vins .hero-bg img {
+  animation: vinsHeroPan 24s ease-in-out infinite alternate;
+  transform-origin: 50% 50%;
+}
+
+.page-vins .hero-overlay {
+  animation: vinsOverlayPulse 9s ease-in-out infinite;
+}
+
+.page-vins .hero-gradient {
+  animation: vinsGradientDrift 10s ease-in-out infinite alternate;
+}
+
+.page-vins .hero-title {
+  animation:
+    vinsTitleIn 1s var(--vins-ease) 0.05s both,
+    vinsSoftFloat 7s ease-in-out 1.2s infinite;
+}
+
+.page-vins .hero-subtitle {
+  animation: vinsSubtitleIn 1s var(--vins-ease) 0.28s both;
+}
+
+.page-vins .hero-text {
+  animation:
+    vinsTextIn 1s var(--vins-ease) 0.45s both,
+    vinsBreath 5.5s ease-in-out 1.5s infinite;
+}
+
+.page-vins .scroll-indicator {
+  animation:
+    bounce 2s infinite,
+    vinsArrowSpin 6s ease-in-out infinite;
+}
+
+.page-vins .subtitle-small {
+  animation: vinsTextIn 0.8s var(--vins-ease) 0.1s both;
+}
+
+.page-vins .value-title {
+  animation: vinsTextIn 0.8s var(--vins-ease) 0.2s both;
+}
+
+.page-vins .text-center .text-dark {
+  animation: vinsTextIn 0.8s var(--vins-ease) 0.35s both;
+}
+
+.page-vins .wines-grid .wine-card {
+  animation:
+    vinsCardIn 0.95s var(--vins-ease) both,
+    vinsCardFloat 6s ease-in-out 1.4s infinite;
+}
+
+.page-vins .wines-grid .wine-card:nth-child(1) {
+  animation-delay: 0.05s, 1.45s;
+}
+
+.page-vins .wines-grid .wine-card:nth-child(2) {
+  animation-delay: 0.13s, 1.53s;
+}
+
+.page-vins .wines-grid .wine-card:nth-child(3) {
+  animation-delay: 0.21s, 1.61s;
+}
+
+.page-vins .wines-grid .wine-card:nth-child(4) {
+  animation-delay: 0.29s, 1.69s;
+}
+
+.page-vins .wines-grid .wine-card:nth-child(5) {
+  animation-delay: 0.37s, 1.77s;
+}
+
+.page-vins .wines-grid .wine-card:nth-child(6) {
+  animation-delay: 0.45s, 1.85s;
+}
+
+.page-vins .wine-image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: -35%;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: translateX(-120%) rotate(18deg);
+  pointer-events: none;
+  animation: vinsShine 4.4s ease-in-out infinite;
+}
+
+.page-vins .wine-image {
+  animation: vinsBottleFloat 4.5s ease-in-out infinite;
+}
+
+.page-vins .wine-badge {
+  animation: vinsBadgePulse 3.2s ease-in-out infinite;
+}
+
+.page-vins .wine-title {
+  animation: vinsSoftFloat 6s ease-in-out infinite;
+}
+
+.page-vins .btn-link {
+  transition:
+    transform 0.35s var(--vins-ease),
+    opacity 0.35s var(--vins-ease);
+}
+
+.page-vins .btn-link i {
+  animation: vinsArrowNudge 1.4s ease-in-out infinite;
+}
+
+.page-vins .product-block {
+  animation: vinsProductIn 0.9s var(--vins-ease) both;
+}
+
+.page-vins .catalogue-section .product-block:nth-child(1) {
+  animation-delay: 0.05s;
+}
+
+.page-vins .catalogue-section .product-block:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.page-vins .catalogue-section .product-block:nth-child(3) {
+  animation-delay: 0.25s;
+}
+
+.page-vins .catalogue-section .product-block:nth-child(4) {
+  animation-delay: 0.35s;
+}
+
+.page-vins .product-image {
+  animation: vinsSoftFloat 7s ease-in-out infinite;
+}
+
+.page-vins .image-backdrop {
+  animation: vinsBackdropPulse 8s ease-in-out infinite;
+}
+
+.page-vins .bottle-img {
+  animation: vinsBottleFloat 5s ease-in-out infinite;
+}
+
+.page-vins .product-content .badge {
+  animation: vinsTextIn 0.8s var(--vins-ease) both;
+}
+
+.page-vins .product-title {
+  animation:
+    vinsTextIn 0.8s var(--vins-ease) 0.08s both,
+    vinsSoftFloat 6s ease-in-out 1.2s infinite;
+}
+
+.page-vins .product-subtitle {
+  animation:
+    vinsTextIn 0.8s var(--vins-ease) 0.16s both,
+    vinsUnderlineSweep 3.8s linear 1.4s infinite;
+}
+
+.page-vins .product-desc {
+  animation: vinsTextIn 0.8s var(--vins-ease) 0.24s both;
+}
+
+.page-vins .product-attributes li {
+  animation: vinsListItemIn 0.7s var(--vins-ease) both;
+}
+
+.page-vins .product-attributes li:nth-child(1) {
+  animation-delay: 0.12s;
+}
+
+.page-vins .product-attributes li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.page-vins .product-attributes li:nth-child(3) {
+  animation-delay: 0.28s;
+}
+
+.page-vins .product-actions {
+  animation: vinsTextIn 0.75s var(--vins-ease) 0.34s both;
+}
+
+.page-vins .btn-download {
+  transition:
+    transform 0.35s var(--vins-ease),
+    opacity 0.35s var(--vins-ease);
+  animation: vinsButtonBreath 2.8s ease-in-out infinite;
+}
+
+.page-vins .btn-download i {
+  animation: vinsArrowNudge 1.35s ease-in-out infinite;
+}
+
+.page-vins .interlude-philosophie {
+  animation: vinsInterludeIn 1s var(--vins-ease) both;
+}
+
+.page-vins .philosophie-content-wrapper {
+  animation:
+    vinsTextIn 0.9s var(--vins-ease) 0.15s both,
+    vinsSoftFloat 7.5s ease-in-out 1.15s infinite;
+}
+
+.page-vins .quote-icon {
+  animation: vinsQuoteOrbit 7s ease-in-out infinite;
+}
+
+.page-vins .philosophie-quote {
+  animation: vinsTextIn 0.9s var(--vins-ease) 0.25s both;
+}
+
+.page-vins .wine-card:hover,
+.page-vins .wine-card:focus-within {
+  transform: translateY(-8px) rotate(-0.25deg);
+}
+
+.page-vins .wine-card:hover .wine-image,
+.page-vins .wine-card:focus-within .wine-image {
+  transform: scale(1.11) translateY(-8px) rotate(0.8deg);
+}
+
+.page-vins .product-block:hover .image-backdrop {
+  transform: translate(-50%, -50%) scale(1.08) rotate(2deg);
+}
+
+.page-vins .product-block:hover .bottle-img {
+  transform: scale(1.07) translateY(-12px) rotate(-0.75deg);
+}
+
+.page-vins .btn-link:hover,
+.page-vins .btn-link:focus-visible {
+  transform: translateX(8px);
+}
+
+.page-vins .btn-download:hover,
+.page-vins .btn-download:focus-visible {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.page-vins .btn-download:active,
+.page-vins .btn-link:active {
+  transform: scale(0.98);
+}
+
+@keyframes vinsSectionReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vinsHeroPan {
+  0% {
+    transform: scale(1.05) translate3d(-0.8%, -0.6%, 0);
+  }
+
+  50% {
+    transform: scale(1.1) translate3d(0.6%, 0.4%, 0);
+  }
+
+  100% {
+    transform: scale(1.07) translate3d(-0.4%, 0.7%, 0);
+  }
+}
+
+@keyframes vinsOverlayPulse {
+  0%,
+  100% {
+    opacity: 0.85;
+  }
+
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes vinsGradientDrift {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(14px);
+    opacity: 0.82;
+  }
+}
+
+@keyframes vinsTitleIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes vinsSubtitleIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vinsTextIn {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vinsCardIn {
+  from {
+    opacity: 0;
+    transform: translateY(26px) scale(0.97) rotate(-0.35deg);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1) rotate(0);
+  }
+}
+
+@keyframes vinsCardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes vinsShine {
+  0% {
+    transform: translateX(-120%) rotate(18deg);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(120%) rotate(18deg);
+    opacity: 0;
+  }
+}
+
+@keyframes vinsBottleFloat {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(0.65deg);
+  }
+}
+
+@keyframes vinsBadgePulse {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 0.95;
+  }
+
+  50% {
+    transform: translateY(-2px) scale(1.05);
+    opacity: 1;
+  }
+}
+
+@keyframes vinsArrowNudge {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(4px);
+  }
+}
+
+@keyframes vinsProductIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.99);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes vinsBackdropPulse {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    transform: translate(-50%, -50%) scale(1.06);
+  }
+}
+
+@keyframes vinsListItemIn {
+  from {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes vinsUnderlineSweep {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(5px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes vinsInterludeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes vinsQuoteOrbit {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+
+  25% {
+    transform: translateY(-4px) rotate(-4deg);
+  }
+
+  75% {
+    transform: translateY(-4px) rotate(4deg);
+  }
+}
+
+@keyframes vinsButtonBreath {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.03);
+  }
+}
+
+@keyframes vinsSoftFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+@keyframes vinsBreath {
+  0%,
+  100% {
+    transform: translateY(0);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: translateY(-3px);
+    opacity: 1;
+  }
+}
+
+@keyframes vinsArrowSpin {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0) rotate(0);
+  }
+
+  50% {
+    transform: translateX(-50%) translateY(-3px) rotate(8deg);
+  }
+}
+
+@media (max-width: 639px) {
+  .page-vins .wines-grid .wine-card {
+    animation-duration: 0.75s, 5s;
+  }
+
+  .page-vins .hero-title,
+  .page-vins .hero-subtitle,
+  .page-vins .hero-text {
+    animation-duration: 0.75s, 5.5s;
+  }
+
+  .page-vins .product-block:hover .bottle-img {
+    transform: scale(1.03) translateY(-8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .page-vins *,
+  .page-vins *::before,
+  .page-vins *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    transform: none !important;
+  }
 }

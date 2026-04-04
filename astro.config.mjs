@@ -6,5 +6,6 @@ const site = process.env.PUBLIC_SITE_URL || 'https://domainedelapistoule.com';
 export default defineConfig({
   site,
   trailingSlash: 'always',
+  prefetch: { defaultStrategy: 'hover' },
   integrations: [tailwind({ applyBaseStyles: false })],
 });
