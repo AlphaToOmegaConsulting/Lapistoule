@@ -35,3 +35,10 @@ test-results/
 nanobanana-output/
 screenshots/
 .claude/
+
+# Local tooling
+.doppler.yaml
+.mcp.json
+.playwright-mcp/
+.playwright-cli/
+.codex-artifacts/
