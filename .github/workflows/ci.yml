@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
     ci:
-        name: Build (+ deploy on main)
+        name: Build
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
@@ -25,14 +25,5 @@ jobs:
 
             - run: npm ci
 
-            # Build — produces dist/ in this same job (no artifact needed)
+            # Build — le déploiement est géré par le dashboard Cloudflare Pages
             - run: npm run build
-
-            # Deploy — main push only; dist/ is already present from the build step above
-            - name: Deploy
-              if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-              uses: cloudflare/wrangler-action@v3
-              with:
-                  apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-                  accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-                  command: pages deploy dist --project-name=lapistoule --branch=main
