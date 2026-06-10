@@ -5,14 +5,15 @@ on:
         branches: [main]
     pull_request:
         branches: [main]
+    workflow_dispatch:
 
 concurrency:
     group: ci-${{ github.ref }}
     cancel-in-progress: true
 
 jobs:
-    build:
-        name: Build
+    ci:
+        name: Build (+ deploy on main)
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
@@ -24,28 +25,12 @@ jobs:
 
             - run: npm ci
 
+            # Build — produces dist/ in this same job (no artifact needed)
             - run: npm run build
 
-            - uses: actions/upload-artifact@v4
-              with:
-                  name: dist
-                  path: dist
-                  retention-days: 7
-
-    deploy:
-        name: Deploy to Cloudflare Pages
-        needs: [build]
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v4
-
-            - uses: actions/download-artifact@v4
-              with:
-                  name: dist
-                  path: dist
-
+            # Deploy — main push only; dist/ is already present from the build step above
             - name: Deploy
+              if: github.ref == 'refs/heads/main' && github.event_name == 'push'
               uses: cloudflare/wrangler-action@v3
               with:
                   apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
